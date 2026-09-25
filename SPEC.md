@@ -132,7 +132,9 @@ Use `mwparserfromhell` to process the wikitext:
 | 2 | Route B | Playthrough 2 (9S), Ending B |
 | 3 | Route C/D | Playthrough 3 and Endings C/D |
 | 4 | Ending E | Ending E |
-| 5 | Everything | Side content, DLC, and lore revealed outside the game |
+| 5 | Everything | DLC, and lore revealed outside the game (anime, stage plays, novels, other games) |
+
+In-game side content (side quests, weapon stories, archives, item and enemy descriptions) is tagged by when it becomes available in play, not level 5. Otherwise players below level 5 would lose most quest and item lore that's available from Route A.
 
 ### 7.2 Tagging pipeline
 
@@ -145,6 +147,13 @@ Tag each chunk with a spoiler level. Rules run in order, and the first rule that
 5. **Default:** tag the chunk **level 5**. When unsure, hide the content.
 
 Write a report of all tags from steps 4 and 5 to `reports/spoiler_tags.csv` for manual review.
+
+Implementation notes (M4, 2026-09-25):
+
+- **Heading rule** also covers an `Endings > C` tab, ending page titles (`The (E)nd of YoRHa`), and config patterns in `spoilers.heading_rules`: crossovers (`Other Appearances`), Ver1.1a, concerts and stage plays, the DLC, and other games' sections → 5; the prologue chapter → 0.
+- **Category rule** includes the wiki's own `{{Spoiler|NA|Route=…}}` banners, applied to the section that contains the banner and its subsections, not the whole page. Banners for other games or with no route are ignored.
+- **LLM classifier:** the prompt (`PROMPT_VERSION` in `src/spoilers.py`) anchors major reveals to the levels given by the wiki's banners: humanity's extinction and the Council fabrication are Route B at the earliest, and black boxes, 2E, and YoRHa's disposal are Route C/D. Results are cached in `data/spoiler_llm_cache.jsonl`, so reruns only pay for changed chunks. Self-reported confidence is almost always 0.8–1.0, so the 0.7 threshold rarely triggers. Accuracy comes from the prompt, the rules, and the audit below.
+- **Audit:** `scripts/audit_spoilers.py` flags chunks that state a major twist but are tagged below the level that reveals it. Fixes go in `data/spoiler_overrides.yaml` (keyed by section path where possible).
 
 ### 7.3 Enforcement
 

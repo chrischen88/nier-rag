@@ -1,11 +1,9 @@
-"""Offline pipeline: dump -> manifest -> parse -> chunk -> tag -> embed -> Chroma (SPEC §4).
-
-Spoiler tagging (M4) isn't implemented yet: every chunk gets the default level 5.
-"""
+"""Offline pipeline: dump -> manifest -> parse -> chunk -> spoiler tags -> embed -> Chroma (SPEC §4)."""
 
 import argparse
 import json
 import sys
+from collections import Counter
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -17,7 +15,8 @@ from src.ingest.dump import load_wiki  # noqa: E402
 from src.ingest.fetch import download_dump  # noqa: E402
 from src.ingest.parse import Renderer, parse_page, to_json  # noqa: E402
 from src.ingest.select import select_pages  # noqa: E402
-from src.providers import get_embedder  # noqa: E402
+from src.providers import get_embedder, get_llm  # noqa: E402
+from src.spoilers import LLMClassifier, SpoilerTagger, load_overrides, write_report  # noqa: E402
 
 
 def main() -> None:
@@ -26,7 +25,9 @@ def main() -> None:
     p.add_argument("--rebuild-manifest", action="store_true",
                    help="regenerate data/manifest.json (overwrites hand edits)")
     p.add_argument("--reindex", action="store_true",
-                   help="skip parsing; re-embed data/chunks.jsonl into the configured embedder's collection")
+                   help="skip parsing; re-tag and re-embed data/chunks.jsonl (e.g. after editing overrides)")
+    p.add_argument("--skip-llm", action="store_true",
+                   help="don't call the spoiler classifier; chunks no rule matches get level 5")
     p.add_argument("--no-embed", action="store_true", help="stop after writing data/chunks.jsonl")
     args = p.parse_args()
     cfg = load_config(args.config) if args.config else load_config()
@@ -37,10 +38,11 @@ def main() -> None:
         print(f"chunks: loaded {len(chunks)} from {cfg['paths']['chunks']}")
     else:
         chunks = parse_and_chunk(cfg, args.rebuild_manifest)
-        with open(chunks_path, "w") as out:
-            for c in chunks:
-                out.write(json.dumps(c.to_json(), ensure_ascii=False) + "\n")
+    tag_chunks(cfg, chunks, skip_llm=args.skip_llm)
     validate_chunks(chunks)
+    with open(chunks_path, "w") as out:
+        for c in chunks:
+            out.write(json.dumps(c.to_json(), ensure_ascii=False) + "\n")
 
     if args.no_embed:
         return
@@ -49,6 +51,24 @@ def main() -> None:
     upsert_chunks(col, embedder, chunks, batch=cfg["embeddings"]["batch_size"])
     print(f"index: {col.count()} chunks in {col.name} "
           f"({embedder.usage.embedding_tokens:,} tokens, {embedder.usage.requests} requests)")
+
+
+def tag_chunks(cfg: dict, chunks: list[Chunk], skip_llm: bool) -> None:
+    clf_cfg = cfg["classifier_llm"]
+    classifier = None
+    if not skip_llm:
+        classifier = LLMClassifier(get_llm(cfg, section="classifier_llm"), clf_cfg["confidence_threshold"],
+                                   resolve_path(cfg, "spoiler_cache"))
+    tagger = SpoilerTagger(cfg["spoilers"], load_overrides(resolve_path(cfg, "overrides")), classifier)
+    results = tagger.tag_all(chunks, workers=clf_cfg.get("workers", 8))
+    rows = write_report(resolve_path(cfg, "spoiler_report"), chunks, results)
+    by_source = Counter(r.source for r in results)
+    by_level = Counter(r.level for r in results)
+    print(f"spoilers: {dict(sorted(by_source.items()))}; levels {dict(sorted(by_level.items()))}")
+    if classifier is not None:
+        usage = classifier.llm.usage
+        print(f"spoilers: {classifier.calls} new classifier calls ({usage.prompt_tokens:,} in / "
+              f"{usage.completion_tokens:,} out tokens); {rows} rows -> {cfg['paths']['spoiler_report']}")
 
 
 def parse_and_chunk(cfg: dict, rebuild_manifest: bool) -> list[Chunk]:

@@ -50,6 +50,8 @@ class Chunk:
     is_speculation: bool = False
     infobox: dict[str, Any] | None = None  # first chunk of a page only
     links_to: list[str] = field(default_factory=list)
+    spoiler_banners: list[dict[str, str]] = field(default_factory=list)  # wiki {{Spoiler}} banners on this
+    # section or an enclosing one; input for the spoiler tagger's category rule
 
     def __post_init__(self) -> None:
         self.content_type = ContentType(self.content_type)
@@ -154,7 +156,7 @@ def merge_short_sections(sections: list[dict[str, Any]], min_tokens: int) -> lis
     of its own, into the previous sibling). Route/ending tabs and speculation are never merged."""
     kept: list[dict[str, Any]] = []
     for sec in sections:
-        sec = {**sec, "links_to": list(sec["links_to"])}
+        sec = {**sec, "links_to": list(sec["links_to"]), "spoiler_banners": list(sec.get("spoiler_banners", []))}
         if _mergeable(sec) and count_tokens(sec["text"]) < min_tokens:
             parent = sec["headings"][:-1]
             target = next((k for k in reversed(kept) if k["headings"] == parent), None)
@@ -163,6 +165,7 @@ def merge_short_sections(sections: list[dict[str, Any]], min_tokens: int) -> lis
             if target is not None:
                 target["text"] += f"\n\n{sec['headings'][-1]}: {sec['text']}"
                 target["links_to"] += [l for l in sec["links_to"] if l not in target["links_to"]]
+                target["spoiler_banners"] += [b for b in sec["spoiler_banners"] if b not in target["spoiler_banners"]]
                 continue
         kept.append(sec)
     return kept
@@ -239,6 +242,9 @@ def chunk_page(page: dict[str, Any], chunk_cfg: dict[str, Any]) -> list[Chunk]:
     sections = merge_short_sections(sections, chunk_cfg["min_tokens"])
     chunks: list[Chunk] = []
     for idx, sec in enumerate(sections):
+        banners = [b for other in sections if other["headings"] == sec["headings"][:len(other["headings"])]
+                   for b in other.get("spoiler_banners", [])]  # this section's and its ancestors'
+        banners = [b for i, b in enumerate(banners) if b not in banners[:i]]
         section_path = " > ".join([display, *sec["headings"]])
         ctype = section_content_type(sec["headings"], page_type)
         for part, body in enumerate(split_text(sec["text"], chunk_cfg["max_tokens"], chunk_cfg["overlap_tokens"])):
@@ -256,6 +262,7 @@ def chunk_page(page: dict[str, Any], chunk_cfg: dict[str, Any]) -> list[Chunk]:
                 is_speculation=ctype in (ContentType.TRIVIA, ContentType.SPECULATION),
                 infobox=(page["infobox"] or None) if not chunks else None,
                 links_to=sec["links_to"],
+                spoiler_banners=banners,
             ))
     return chunks
 

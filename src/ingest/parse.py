@@ -9,6 +9,7 @@ Pipeline per page:
 
 from __future__ import annotations
 
+import json
 import re
 from collections import Counter
 from dataclasses import asdict, dataclass, field
@@ -19,6 +20,7 @@ from mwparserfromhell.nodes import Comment, Heading, Tag, Template, Text, Wikili
 from mwparserfromhell.wikicode import Wikicode
 
 TAB_MARK = "\ue000TAB\ue000"  # private-use chars: survive the parser (NUL does not); level set when splitting
+BANNER_MARK = "\ue000SPOILER\ue000"  # {{Spoiler}} position, attached to the enclosing section when splitting
 HEADING_RE = re.compile(r"^(={1,6})\s*(.+?)\s*\1\s*$")
 DROP_LINK_PREFIXES = ("file:", "image:", "category:", "media:")
 INTERLANG_RE = re.compile(r"^[a-z]{2,3}(-[a-z]+)?:", re.I)
@@ -32,6 +34,7 @@ class Section:
     headings: list[str]  # e.g. ["Background", "NieR:Automata"]; [] for the lead
     text: str
     links_to: list[str] = field(default_factory=list)
+    spoiler_banners: list[dict[str, str]] = field(default_factory=list)  # {{Spoiler}} banners in this section
     anchor: str | None = None  # nearest real heading (tabs have no anchor of their own)
     is_tab: bool = False  # the last heading is a tab name, e.g. an ending or route
 
@@ -141,7 +144,7 @@ class Renderer:
             if (v := _param(t, key)) is not None:
                 banner[key.lower()] = plain_text(self.render(v))[0]
         self.spoiler_banners.append(banner)
-        return ""
+        return f"\n{BANNER_MARK}{json.dumps(banner)}\n"
 
     def _quote(self, t: Template) -> str:
         q = self.render(_param(t, 1) or "").strip()
@@ -232,13 +235,14 @@ class RawSection:
     anchor: str | None
     is_tab: bool
     body: str
+    banners: list[dict[str, str]]
 
 
 def split_sections(rendered: str) -> list[RawSection]:
     """Split rendered wikitext on headings. Tabs nest one level under the last real heading."""
     stack: list[tuple[int, str, bool]] = []  # (level, title, is_tab)
     base_level = 1
-    sections = [RawSection([], None, False, "")]
+    sections = [RawSection([], None, False, "", [])]
     bodies: list[list[str]] = [[]]
     for line in rendered.split("\n"):
         m = HEADING_RE.match(line.strip())
@@ -248,13 +252,16 @@ def split_sections(rendered: str) -> list[RawSection]:
         elif line.startswith(TAB_MARK):
             level, title, tab = base_level + 1, line[len(TAB_MARK):].strip(), True
         else:
-            bodies[-1].append(line)
+            if line.startswith(BANNER_MARK):
+                sections[-1].banners.append(json.loads(line[len(BANNER_MARK):]))
+            else:
+                bodies[-1].append(line)
             continue
         while stack and stack[-1][0] >= level:
             stack.pop()
         stack.append((level, title, tab))
         anchor = next((t for _, t, is_tab in reversed(stack) if not is_tab), None)
-        sections.append(RawSection([t for _, t, _ in stack], anchor, tab, ""))
+        sections.append(RawSection([t for _, t, _ in stack], anchor, tab, "", []))
         bodies.append([])
     for sec, body in zip(sections, bodies):
         sec.body = "\n".join(body)
@@ -277,7 +284,7 @@ def parse_page(page, wiki, base_url: str, aliases: list[str], renderer: Renderer
         links = list(dict.fromkeys(t for r in raw_targets if (t := wiki.resolve(r)) and t != page.title))
         page_links.update(dict.fromkeys(links))
         sections.append(Section(headings=raw.headings, text=text, links_to=links,
-                                anchor=raw.anchor, is_tab=raw.is_tab))
+                                spoiler_banners=raw.banners, anchor=raw.anchor, is_tab=raw.is_tab))
     return ParsedPage(
         page_id=page.page_id,
         title=page.title,

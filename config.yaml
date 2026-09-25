@@ -12,6 +12,9 @@ classifier_llm:                # spoiler tagger, ingest time only (SPEC §7.2)
   model: gpt-4o-mini
   temperature: 0.0
   confidence_threshold: 0.7
+  max_output_tokens: 100
+  workers: 3                   # parallel requests (8 exceeded the 200k tokens/min limit); cached in paths.spoiler_cache
+  max_retries: 8
 
 embeddings:
   model: text-embedding-3-small   # changing this requires `scripts/ingest.py --reindex`
@@ -25,6 +28,7 @@ paths:
   parse_report: reports/parse_report.json
   overrides: data/spoiler_overrides.yaml
   spoiler_report: reports/spoiler_tags.csv
+  spoiler_cache: data/spoiler_llm_cache.jsonl
 
 chunking:
   max_tokens: 400
@@ -45,6 +49,8 @@ chunking:
     name_JP: Japanese name
     romaji: Romaji
     first_appearance: First appearance
+    letter: Ending letter       # ending pages
+    chapter: Chapter
 
 retrieval:
   candidates: 20               # top-k from Chroma before MMR
@@ -105,3 +111,16 @@ pricing:                      # USD per 1M tokens, for cost estimates only; chec
   chat_input: 0.15            # gpt-4o-mini
   chat_output: 0.60
   embedding: 0.02             # text-embedding-3-small
+
+spoilers:                     # SPEC §7.2 rules 2-3. Route/ending markers ("Route B", "Ending E",
+                              # an "Endings > C" tab) and {{Spoiler}} banners are handled in code.
+  heading_rules:              # regex on each part of the section path, page name included; max level wins
+    - {pattern: "^Other [Aa]ppearances$", level: 5}          # crossovers in other games
+    - {pattern: "Ver1\\.1a", level: 5}                       # the anime (open question in SPEC §15)
+    - {pattern: "Orchestra Concert|Memories of Puppets|[Ss]tage [Pp]lay|YoRHa Boys", level: 5}
+    - {pattern: "^3C3C1D119440927$|^DLC$", level: 5}
+    - {pattern: "^(NieR|NieR Replicant.*|NieR Gestalt.*|Replicant( and Gestalt)?|Gestalt|NieR Reincarnation|Drakengard.*|SINoALICE.*)$", level: 5}  # other games
+    - {pattern: "^Chapter 01\\b|^01-0\\d", level: 0}          # prologue chapter and its scenes
+    - {pattern: "^Chapter 02\\b", level: 1}
+  category_rules:             # regex on page categories; max level wins
+    - {pattern: "^Colosseums$", level: 5}                    # DLC arenas

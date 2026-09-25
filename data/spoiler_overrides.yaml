@@ -1,6 +1,9 @@
 # Manual spoiler-level overrides (rule 1 in SPEC §7.2). First match wins.
-# Keys are a chunk_id ("{page_id}:{section_idx}:{part}") or a page title.
-#
-# "Ending E": 4
-# "12345:3:0": 2
-{}
+# Keys: a chunk_id ("{page_id}:{section_idx}:{part}"), an exact section path, or a page title.
+# Prefer section paths: chunk_ids can shift if parsing changes.
+
+# From the 2026-09-25 twist audit (scripts/audit_spoilers.py):
+"YoRHa > YoRHa Androids > Designations": 3                  # Type E "Executioner" hints at 2B = 2E
+"YoRHa > YoRHa Androids > Designations > Model Types": 3
+"Pod 153 > Personality": 4                                   # describes Ending E
+"Earth > Characters > NieR:Automata": 3                      # character list includes the Red Girl

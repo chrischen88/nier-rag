@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 
+import threading
 from collections.abc import Iterator
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 from openai import OpenAI
 
@@ -25,6 +26,7 @@ class Usage:
     completion_tokens: int = 0
     embedding_tokens: int = 0
     requests: int = 0
+    _lock: threading.Lock = field(default_factory=threading.Lock, repr=False, compare=False)
 
 
 def _client(max_retries: int) -> OpenAI:
@@ -94,10 +96,11 @@ class OpenAILLM:
                 yield chunk.choices[0].delta.content
 
     def _record(self, usage) -> None:
-        self.usage.requests += 1
-        if usage:
-            self.usage.prompt_tokens += usage.prompt_tokens
-            self.usage.completion_tokens += usage.completion_tokens
+        with self.usage._lock:  # the spoiler tagger calls generate() from several threads
+            self.usage.requests += 1
+            if usage:
+                self.usage.prompt_tokens += usage.prompt_tokens
+                self.usage.completion_tokens += usage.completion_tokens
 
 
 def estimate_cost(cfg: dict, llm_usage: Usage, embed_usage: Usage | None = None) -> float:

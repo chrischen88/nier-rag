@@ -15,10 +15,17 @@ Models, paths, and thresholds live in `config.yaml`.
 ## Run
 
 ```bash
-uv run python scripts/ingest.py     # dump -> manifest -> parse -> chunk -> embed into Chroma
-uv run python scripts/ingest.py --reindex    # re-embed data/chunks.jsonl only (e.g. after changing the embedder)
+uv run python scripts/ingest.py     # dump -> manifest -> parse -> chunk -> spoiler tags -> embed into Chroma
+uv run python scripts/ingest.py --reindex    # re-tag + re-embed data/chunks.jsonl (after editing overrides or the embedder)
 uv run python scripts/query.py "Who is Pascal?" --level 1   # inspect retrieval at a progress level
 uv run python scripts/ask.py "Who is Pascal?" --level 1     # streamed answer with citations (--debug shows passages)
+uv run python scripts/audit_spoilers.py   # flag chunks that state a twist below its reveal level
+```
+
+Spoiler tags: review `reports/spoiler_tags.csv`, fix tags in `data/spoiler_overrides.yaml`, then run
+`uv run python scripts/ingest.py --reindex` (classifier results are cached, so this only re-embeds).
+
+```bash
 uv run streamlit run app.py         # M5
 uv run python scripts/eval.py       # M6
 ```

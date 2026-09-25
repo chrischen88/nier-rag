@@ -12,3 +12,4 @@ data/*
 reports/*
 !reports/.gitkeep
 !reports/spoiler_tags.csv
+graphify-out
