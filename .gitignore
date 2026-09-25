@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.hypothesis/
+.env
+
+# Raw dumps, caches, and the vector store are rebuilt by scripts/ingest.py
+data/*
+!data/manifest.json
+!data/spoiler_overrides.yaml
+reports/*
+!reports/.gitkeep
+!reports/spoiler_tags.csv

@@ -1,0 +1,6 @@
+# Manual spoiler-level overrides (rule 1 in SPEC §7.2). First match wins.
+# Keys are a chunk_id ("{page_id}:{section_idx}:{part}") or a page title.
+#
+# "Ending E": 4
+# "12345:3:0": 2
+{}

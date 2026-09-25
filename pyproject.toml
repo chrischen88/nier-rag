@@ -1,0 +1,27 @@
+[project]
+name = "yorha-archive"
+version = "0.1.0"
+description = "Spoiler-aware NieR:Automata lore assistant (RAG over the NieR wiki)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "streamlit",
+    "chromadb",
+    "openai",
+    "mwparserfromhell",
+    "pyyaml",
+    "python-dotenv",
+    "requests",
+    "py7zr>=1.1.3",
+    "tiktoken>=0.14.0",
+]
+
+[dependency-groups]
+dev = ["pytest", "hypothesis"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

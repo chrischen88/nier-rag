@@ -1,0 +1,5941 @@
+{
+ "source": "https://s3.amazonaws.com/wikia_xml_dumps/n/ni/nier_pages_current.xml.7z",
+ "pages": [
+  {
+   "page_id": 13894,
+   "title": "(L)one wolf",
+   "revision_id": 72301,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 13896,
+   "title": "(N)o man's village",
+   "revision_id": 72303,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 13899,
+   "title": "(Q)uestionable actions",
+   "revision_id": 72306,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 5090,
+   "title": "(Top Secret) Black Box",
+   "revision_id": 72497,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 6461,
+   "title": "(Top Secret) Model No.2",
+   "revision_id": 67688,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 5306,
+   "title": "(Top Secret) Project YoRHa",
+   "revision_id": 68301,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 6462,
+   "title": "(Top Secret) YoRHa Disposal",
+   "revision_id": 67660,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 5766,
+   "title": "01-01 1: 2B's Aerial Battle",
+   "revision_id": 72277,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 5769,
+   "title": "01-01 2: 9S Disarms the Defense System",
+   "revision_id": 56328,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 3863,
+   "title": "01-01: YoRHa Descent",
+   "revision_id": 56385,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 3911,
+   "title": "01-02 1: 2B's Defense Machine Battle",
+   "revision_id": 56330,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 5775,
+   "title": "01-02 2: 9S Outside the Factory",
+   "revision_id": 56332,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 3917,
+   "title": "01-02 3: 2B Inside the Factory",
+   "revision_id": 72276,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 3920,
+   "title": "01-02 4: 2B's Defense Machine Battle 2",
+   "revision_id": 56365,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 5771,
+   "title": "01-02: Abandoned Factory",
+   "revision_id": 56386,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 14234,
+   "title": "01-03 1: 2B's Battle on Land",
+   "revision_id": 56367,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 14235,
+   "title": "01-03 2: 9S's Aerial Combat",
+   "revision_id": 56368,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 14236,
+   "title": "01-03 3: 2B's Aerial Combat",
+   "revision_id": 72909,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 14223,
+   "title": "01-03: Goliath Battle",
+   "revision_id": 56387,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 14238,
+   "title": "01-04 1: 2B Awakens",
+   "revision_id": 56374,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 14240,
+   "title": "01-04 2: 9S Gets 2B Set Up",
+   "revision_id": 56376,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 14237,
+   "title": "01-04: The Bunker",
+   "revision_id": 56388,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 14241,
+   "title": "01-05: The Mission",
+   "revision_id": 59965,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 6624,
+   "title": "11B's Escape Plan",
+   "revision_id": 66825,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 3901,
+   "title": "11B's Memento",
+   "revision_id": 69136,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 4837,
+   "title": "14th Machine War",
+   "revision_id": 66449,
+   "reasons": [
+    "link:main_page"
+   ]
+  },
+  {
+   "page_id": 5737,
+   "title": "21O",
+   "revision_id": 55038,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4799,
+   "title": "22B",
+   "revision_id": 71005,
+   "reasons": [
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 5729,
+   "title": "2B Copy",
+   "revision_id": 60614,
+   "reasons": [
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 15110,
+   "title": "2P's Body Replica",
+   "revision_id": 69667,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4040,
+   "title": "3C3C1D119440927",
+   "revision_id": 72317,
+   "reasons": [
+    "link:main_page",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 15669,
+   "title": "4S",
+   "revision_id": 71233,
+   "reasons": [
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4795,
+   "title": "64B",
+   "revision_id": 43273,
+   "reasons": [
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 10488,
+   "title": "6C2P4A118680823",
+   "revision_id": 72282,
+   "reasons": [
+    "link:main_page",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 4797,
+   "title": "8B",
+   "revision_id": 71268,
+   "reasons": [
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4879,
+   "title": "8th Machine War",
+   "revision_id": 70165,
+   "reasons": [
+    "manual"
+   ]
+  },
+  {
+   "page_id": 15112,
+   "title": "9P's Body Replica",
+   "revision_id": 69679,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6922,
+   "title": "9S (unit)",
+   "revision_id": 55039,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 6640,
+   "title": "A Pious Robot's Will",
+   "revision_id": 70173,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 13890,
+   "title": "A mountain too (H)igh",
+   "revision_id": 72297,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 3789,
+   "title": "A060: P Shield",
+   "revision_id": 32976,
+   "reasons": [
+    "category:NieR:Automata Pod Programs",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 4137,
+   "title": "A080: Wave",
+   "revision_id": 32975,
+   "reasons": [
+    "category:NieR:Automata Pod Programs",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 3793,
+   "title": "A090: Wire",
+   "revision_id": 33380,
+   "reasons": [
+    "category:NieR:Automata Pod Programs",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 5827,
+   "title": "A100: Decoy",
+   "revision_id": 70962,
+   "reasons": [
+    "category:NieR:Automata Pod Programs",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 5823,
+   "title": "A110: Slow",
+   "revision_id": 33371,
+   "reasons": [
+    "category:NieR:Automata Pod Programs",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 6656,
+   "title": "A120: Repair",
+   "revision_id": 33378,
+   "reasons": [
+    "category:NieR:Automata Pod Programs",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 5821,
+   "title": "A130: Bomb",
+   "revision_id": 33377,
+   "reasons": [
+    "category:NieR:Automata Pod Programs",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 3797,
+   "title": "A140: Gravity",
+   "revision_id": 33376,
+   "reasons": [
+    "category:NieR:Automata Pod Programs",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 5831,
+   "title": "A150: Volt",
+   "revision_id": 33375,
+   "reasons": [
+    "category:NieR:Automata Pod Programs",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 5818,
+   "title": "A160: Missile",
+   "revision_id": 70961,
+   "reasons": [
+    "category:NieR:Automata Pod Programs",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 4066,
+   "title": "A170: Scanner",
+   "revision_id": 33370,
+   "reasons": [
+    "category:NieR:Automata Pod Programs",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 6923,
+   "title": "A2 (unit)",
+   "revision_id": 55041,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 8105,
+   "title": "A2 Wig",
+   "revision_id": 69622,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3898,
+   "title": "Abandoned Factory",
+   "revision_id": 71188,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 6707,
+   "title": "Abandoned Factory Memo",
+   "revision_id": 66764,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 7905,
+   "title": "Abandoned Factory/His Grace's Room",
+   "revision_id": 66462,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 7897,
+   "title": "Abandoned Factory/Underground Area",
+   "revision_id": 38245,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 12756,
+   "title": "Accord",
+   "revision_id": 71853,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 7863,
+   "title": "Accounting Book",
+   "revision_id": 69536,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16549,
+   "title": "Achievements (Automata)",
+   "revision_id": 72252,
+   "reasons": [
+    "category:NieR:Automata"
+   ]
+  },
+  {
+   "page_id": 3547,
+   "title": "Adam",
+   "revision_id": 72972,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "link:main_page",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 6525,
+   "title": "Adam (Unit)",
+   "revision_id": 70447,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "category:NieR:Automata Units",
+    "category:Special Unit Machines"
+   ]
+  },
+  {
+   "page_id": 8109,
+   "title": "Adam's Glasses",
+   "revision_id": 69618,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8782,
+   "title": "Aged Stick",
+   "revision_id": 69552,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 13893,
+   "title": "Aji wo (K)utta",
+   "revision_id": 72300,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 8107,
+   "title": "Alien Mask",
+   "revision_id": 69619,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3710,
+   "title": "Aliens",
+   "revision_id": 71979,
+   "reasons": [
+    "manual"
+   ]
+  },
+  {
+   "page_id": 16716,
+   "title": "Amber (Automata)",
+   "revision_id": 69401,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5223,
+   "title": "Amnesia",
+   "revision_id": 69984,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 5051,
+   "title": "Amusement Park",
+   "revision_id": 65297,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 3997,
+   "title": "Amusement Park Rabbit",
+   "revision_id": 69678,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Peculiar Machines"
+   ]
+  },
+  {
+   "page_id": 7645,
+   "title": "Amusement Park/Attraction Square",
+   "revision_id": 66487,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 7939,
+   "title": "Amusement Park/God Box",
+   "revision_id": 70621,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 6569,
+   "title": "Amusement Park/Secret Basement",
+   "revision_id": 38242,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 7648,
+   "title": "Amusement Park/Theater",
+   "revision_id": 56874,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 7652,
+   "title": "Amusement Park/Under the Theater",
+   "revision_id": 38240,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 16700,
+   "title": "Ancient Mask",
+   "revision_id": 69515,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5082,
+   "title": "Ancient Overlord (Automata)",
+   "revision_id": 69748,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 3654,
+   "title": "Android",
+   "revision_id": 72121,
+   "reasons": [
+    "manual"
+   ]
+  },
+  {
+   "page_id": 3592,
+   "title": "Anemone",
+   "revision_id": 72384,
+   "reasons": [
+    "link:main_page",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 7148,
+   "title": "Anemone's Past",
+   "revision_id": 70316,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 3847,
+   "title": "Angel's Folly",
+   "revision_id": 69778,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 16795,
+   "title": "Animal Bait",
+   "revision_id": 69234,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5058,
+   "title": "Animal Care",
+   "revision_id": 69102,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 6918,
+   "title": "Animal Machine",
+   "revision_id": 66190,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Peculiar Machines"
+   ]
+  },
+  {
+   "page_id": 4761,
+   "title": "Animal-loving Machine",
+   "revision_id": 71244,
+   "reasons": [
+    "category:Amicable Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 5894,
+   "title": "Arapaima",
+   "revision_id": 69806,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5909,
+   "title": "Arapaima Machine",
+   "revision_id": 69823,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 13976,
+   "title": "Army of Humanity",
+   "revision_id": 70396,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:Organizations"
+   ]
+  },
+  {
+   "page_id": 5840,
+   "title": "Arowana",
+   "revision_id": 69796,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5919,
+   "title": "Arowana Machine",
+   "revision_id": 69835,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8747,
+   "title": "Ash Grey Hair",
+   "revision_id": 70072,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3736,
+   "title": "Auguste",
+   "revision_id": 66476,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "category:NieR:Automata Units",
+    "category:Special Unit Machines"
+   ]
+  },
+  {
+   "page_id": 16783,
+   "title": "Aural Cure",
+   "revision_id": 69270,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 13892,
+   "title": "Bad (J)udgement",
+   "revision_id": 72299,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 3949,
+   "title": "Bare Fists",
+   "revision_id": 69777,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 5906,
+   "title": "Basking Shark",
+   "revision_id": 69819,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5920,
+   "title": "Basking Shark Machine",
+   "revision_id": 69836,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5925,
+   "title": "Battery",
+   "revision_id": 69841,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8828,
+   "title": "Beast Hide",
+   "revision_id": 69725,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5075,
+   "title": "Beastbane (Automata)",
+   "revision_id": 69745,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 6666,
+   "title": "Beastcurse (Automata)",
+   "revision_id": 70887,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 6671,
+   "title": "Beastlord (Automata)",
+   "revision_id": 69759,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 16875,
+   "title": "Beautiful Glass",
+   "revision_id": 69927,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5896,
+   "title": "Beetle Fish",
+   "revision_id": 69815,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4751,
+   "title": "Big Sister Machine",
+   "revision_id": 71026,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Village Machines",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 17280,
+   "title": "Black Box",
+   "revision_id": 72511,
+   "reasons": [
+    "category:NieR:Automata Lore"
+   ]
+  },
+  {
+   "page_id": 15118,
+   "title": "Black Fox Mask",
+   "revision_id": 69675,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4165,
+   "title": "Black Hair",
+   "revision_id": 69970,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4976,
+   "title": "Black Pearl (Automata)",
+   "revision_id": 69726,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5890,
+   "title": "Bloat Fish",
+   "revision_id": 69805,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5911,
+   "title": "Bloat Fish Machine",
+   "revision_id": 69826,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5802,
+   "title": "Blood-drenched Machine",
+   "revision_id": 33518,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Peculiar Machines"
+   ]
+  },
+  {
+   "page_id": 5900,
+   "title": "Blowfish (Automata)",
+   "revision_id": 69811,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5912,
+   "title": "Blowfish Machine",
+   "revision_id": 69828,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4159,
+   "title": "Blue Hair",
+   "revision_id": 69897,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8770,
+   "title": "Blue Ribbon",
+   "revision_id": 69613,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8831,
+   "title": "Boar Meat (Automata)",
+   "revision_id": 69494,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3776,
+   "title": "Boku-Shi",
+   "revision_id": 66481,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "category:NieR:Automata Units",
+    "category:Special Unit Machines"
+   ]
+  },
+  {
+   "page_id": 6723,
+   "title": "Book: \"Pensées\"",
+   "revision_id": 69521,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 13895,
+   "title": "Break ti(M)e",
+   "revision_id": 72302,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 5905,
+   "title": "Bream (Automata)",
+   "revision_id": 69818,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5915,
+   "title": "Bream Machine",
+   "revision_id": 69831,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 13905,
+   "title": "Broken (W)ings",
+   "revision_id": 72312,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 16711,
+   "title": "Broken Battery (Automata)",
+   "revision_id": 69385,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8861,
+   "title": "Broken Circuit",
+   "revision_id": 69382,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5926,
+   "title": "Broken Firearm",
+   "revision_id": 69842,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8859,
+   "title": "Broken Key",
+   "revision_id": 69328,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 7864,
+   "title": "Broken Toy",
+   "revision_id": 69534,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4153,
+   "title": "Brown Hair",
+   "revision_id": 70029,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6700,
+   "title": "Bulletin Record",
+   "revision_id": 66776,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 6957,
+   "title": "Bunker",
+   "revision_id": 66463,
+   "reasons": [
+    "category:NieR:Automata Locations",
+    "link:main_page"
+   ]
+  },
+  {
+   "page_id": 4177,
+   "title": "CEO Bullets",
+   "revision_id": 69860,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6582,
+   "title": "Camouflage Goggles",
+   "revision_id": 69621,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 7147,
+   "title": "Camp Development",
+   "revision_id": 70309,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 9606,
+   "title": "Canyon Machine",
+   "revision_id": 70036,
+   "reasons": [
+    "category:NieR:Automata"
+   ]
+  },
+  {
+   "page_id": 9626,
+   "title": "Cardboard Pod",
+   "revision_id": 69596,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5889,
+   "title": "Carp (Automata)",
+   "revision_id": 69799,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5910,
+   "title": "Carp Machine",
+   "revision_id": 69824,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 15128,
+   "title": "Carrier (Item)",
+   "revision_id": 71209,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3685,
+   "title": "Chapter 01: Prologue",
+   "revision_id": 72275,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 3800,
+   "title": "Chapter 02: Resistance Camp",
+   "revision_id": 32541,
+   "reasons": [
+    "category:NieR:Automata Chapters"
+   ]
+  },
+  {
+   "page_id": 13886,
+   "title": "Chil(D)hood's end",
+   "revision_id": 72293,
+   "reasons": [
+    "link:main_page",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 3971,
+   "title": "Child Machine",
+   "revision_id": 71018,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Village Machines"
+   ]
+  },
+  {
+   "page_id": 8851,
+   "title": "Children's Cores",
+   "revision_id": 69517,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8801,
+   "title": "Choice Sachet",
+   "revision_id": 69566,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5440,
+   "title": "City Ruins",
+   "revision_id": 67052,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 6998,
+   "title": "City Ruins/???",
+   "revision_id": 66524,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 7001,
+   "title": "City Ruins/Canyon",
+   "revision_id": 70277,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 6997,
+   "title": "City Ruins/Deep Cave",
+   "revision_id": 69602,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 6999,
+   "title": "City Ruins/Emil's Residence",
+   "revision_id": 69603,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 7000,
+   "title": "City Ruins/Kainé's Shack",
+   "revision_id": 70278,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 6996,
+   "title": "City Ruins/Shopping Center",
+   "revision_id": 71328,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 13901,
+   "title": "City e(S)cape",
+   "revision_id": 72308,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 6460,
+   "title": "Class 1 Patient Health Record",
+   "revision_id": 70098,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 8869,
+   "title": "Clean Nut",
+   "revision_id": 69389,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5899,
+   "title": "Coelacanth",
+   "revision_id": 72130,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5916,
+   "title": "Coelacanth Machine",
+   "revision_id": 69832,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 14197,
+   "title": "Command",
+   "revision_id": 70394,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:Organizations"
+   ]
+  },
+  {
+   "page_id": 3549,
+   "title": "Commander White",
+   "revision_id": 72975,
+   "reasons": [
+    "link:main_page",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 8785,
+   "title": "Commandment Slab",
+   "revision_id": 69554,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16734,
+   "title": "Complex Gadget",
+   "revision_id": 69509,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 7011,
+   "title": "Copied City",
+   "revision_id": 69601,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 4966,
+   "title": "Copper Ore (Automata)",
+   "revision_id": 69168,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 13898,
+   "title": "Corru(P)tion",
+   "revision_id": 72305,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 8803,
+   "title": "Cosmetics",
+   "revision_id": 70062,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 13967,
+   "title": "Council of Humanity",
+   "revision_id": 71852,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:Organizations"
+   ]
+  },
+  {
+   "page_id": 5098,
+   "title": "Council/YoRHa Records",
+   "revision_id": 66798,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 4806,
+   "title": "Courageous Brother",
+   "revision_id": 60862,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Peculiar Machines"
+   ]
+  },
+  {
+   "page_id": 14199,
+   "title": "Crossovers",
+   "revision_id": 72939,
+   "reasons": [
+    "category:NieR:Automata"
+   ]
+  },
+  {
+   "page_id": 4398,
+   "title": "Cruel Arrogance",
+   "revision_id": 69775,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 3711,
+   "title": "Cruel Blood Oath",
+   "revision_id": 69766,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 3721,
+   "title": "Cruel Lament",
+   "revision_id": 69783,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 3659,
+   "title": "Cruel Oath",
+   "revision_id": 69752,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 8868,
+   "title": "Crushed Nut",
+   "revision_id": 69715,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8880,
+   "title": "Crystal (Automata)",
+   "revision_id": 69257,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 7157,
+   "title": "Culinary Researcher",
+   "revision_id": 69141,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 16786,
+   "title": "Cure All + Heal All",
+   "revision_id": 69220,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16785,
+   "title": "Cure All Status",
+   "revision_id": 69217,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16784,
+   "title": "Cure Manipulation",
+   "revision_id": 69271,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3723,
+   "title": "Cypress Stick",
+   "revision_id": 69756,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 7210,
+   "title": "Data Analysis Freak",
+   "revision_id": 72723,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 7209,
+   "title": "Data Analysis Freak 2",
+   "revision_id": 69124,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 16950,
+   "title": "Data Chip A",
+   "revision_id": 70321,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16949,
+   "title": "Data Chip B",
+   "revision_id": 70320,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16948,
+   "title": "Data Chip C",
+   "revision_id": 70319,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16947,
+   "title": "Data Chip D",
+   "revision_id": 70318,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16946,
+   "title": "Data Chip E",
+   "revision_id": 70317,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6919,
+   "title": "Data on the Old World",
+   "revision_id": 69358,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 13903,
+   "title": "Deb(U)nked",
+   "revision_id": 72310,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 3722,
+   "title": "Demon's Cry",
+   "revision_id": 69779,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 8853,
+   "title": "Dented Plate",
+   "revision_id": 69353,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16705,
+   "title": "Dented Socket",
+   "revision_id": 69363,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6696,
+   "title": "Department Store Flyer",
+   "revision_id": 66780,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 8898,
+   "title": "Desert Rose (Automata)",
+   "revision_id": 69514,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6978,
+   "title": "Desert Zone",
+   "revision_id": 66990,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 7002,
+   "title": "Desert Zone/Border Area",
+   "revision_id": 66677,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 7620,
+   "title": "Desert Zone/Housing Complex",
+   "revision_id": 56871,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 7628,
+   "title": "Desert Zone/Pit Hollow",
+   "revision_id": 56872,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 7613,
+   "title": "Desert Zone/Sand Cave",
+   "revision_id": 38234,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 6594,
+   "title": "Desert Zone/Trial of Sand",
+   "revision_id": 50068,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 15788,
+   "title": "Deserving of Life",
+   "revision_id": 65927,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 4047,
+   "title": "Destroyer Outfit",
+   "revision_id": 70909,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 2159,
+   "title": "Devola",
+   "revision_id": 72205,
+   "reasons": [
+    "link:main_page",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 5060,
+   "title": "Devola's Request",
+   "revision_id": 69143,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 8804,
+   "title": "Dietary Goods",
+   "revision_id": 70060,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8888,
+   "title": "Drab Bracelet",
+   "revision_id": 69498,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5152,
+   "title": "Dragoon Lance (Automata)",
+   "revision_id": 71155,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 8687,
+   "title": "Dress Module",
+   "revision_id": 69681,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8879,
+   "title": "Dye",
+   "revision_id": 69489,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6855,
+   "title": "Dying Goliath Biped",
+   "revision_id": 42134,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Peculiar Machines"
+   ]
+  },
+  {
+   "page_id": 7136,
+   "title": "E-Drug",
+   "revision_id": 70284,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8874,
+   "title": "Eagle Eggs",
+   "revision_id": 69428,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 15851,
+   "title": "Earth",
+   "revision_id": 71180,
+   "reasons": [
+    "manual"
+   ]
+  },
+  {
+   "page_id": 16741,
+   "title": "Elaborate Gadget",
+   "revision_id": 69508,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5138,
+   "title": "Elevator Key",
+   "revision_id": 69520,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 2087,
+   "title": "Emil",
+   "revision_id": 72978,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "link:main_page",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 4659,
+   "title": "Emil (Unit)",
+   "revision_id": 70345,
+   "reasons": [
+    "category:???",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4180,
+   "title": "Emil Bullets",
+   "revision_id": 69593,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4616,
+   "title": "Emil Clones",
+   "revision_id": 70344,
+   "reasons": [
+    "category:???",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 6816,
+   "title": "Emil Clones/SINoALICE",
+   "revision_id": 22657,
+   "reasons": [
+    "subpage:Emil Clones"
+   ]
+  },
+  {
+   "page_id": 4397,
+   "title": "Emil Heads",
+   "revision_id": 69785,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 7034,
+   "title": "Emil Heads/SINoALICE",
+   "revision_id": 23649,
+   "reasons": [
+    "subpage:Emil Heads"
+   ]
+  },
+  {
+   "page_id": 8774,
+   "title": "Emil Mask",
+   "revision_id": 69616,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5057,
+   "title": "Emil's Determination",
+   "revision_id": 72900,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 6579,
+   "title": "Emil's Head",
+   "revision_id": 69615,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4612,
+   "title": "Emil's Memories",
+   "revision_id": 70299,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 4932,
+   "title": "Emil's Shop",
+   "revision_id": 72857,
+   "reasons": [
+    "category:NieR:Automata"
+   ]
+  },
+  {
+   "page_id": 17242,
+   "title": "Ending ◬",
+   "revision_id": 72316,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 3656,
+   "title": "Engels",
+   "revision_id": 66473,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "category:NieR:Automata Units",
+    "category:Special Unit Machines"
+   ]
+  },
+  {
+   "page_id": 6635,
+   "title": "Engels 110-B Record 0005",
+   "revision_id": 66801,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 6637,
+   "title": "Engels 110-B Record 0010",
+   "revision_id": 66804,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 6638,
+   "title": "Engels 110-B Record 0020",
+   "revision_id": 66805,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 3740,
+   "title": "Engine Blade",
+   "revision_id": 69755,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 4024,
+   "title": "Ernst",
+   "revision_id": 66496,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Special Unit Machines"
+   ]
+  },
+  {
+   "page_id": 3548,
+   "title": "Eve",
+   "revision_id": 72979,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "link:main_page",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 6531,
+   "title": "Eve (Unit)",
+   "revision_id": 70448,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "category:NieR:Automata Units",
+    "category:Special Unit Machines"
+   ]
+  },
+  {
+   "page_id": 13902,
+   "title": "Fa(T)al error",
+   "revision_id": 72309,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 6705,
+   "title": "Factory Cafeteria Sign",
+   "revision_id": 69449,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 2225,
+   "title": "Faith (Automata)",
+   "revision_id": 69741,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 3968,
+   "title": "Family Squabble",
+   "revision_id": 69246,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 2464,
+   "title": "Fang of the Twins (Automata)",
+   "revision_id": 69758,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 4746,
+   "title": "Father Machine",
+   "revision_id": 71008,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Village Machines"
+   ]
+  },
+  {
+   "page_id": 5749,
+   "title": "Father Servo",
+   "revision_id": 71243,
+   "reasons": [
+    "category:Amicable Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 9940,
+   "title": "Filler Metal",
+   "revision_id": 69492,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6679,
+   "title": "Filthy Lottery Ticket",
+   "revision_id": 66767,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 8783,
+   "title": "Filthy Mask",
+   "revision_id": 69553,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 7065,
+   "title": "Find a Present",
+   "revision_id": 70016,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 5843,
+   "title": "Fishing (Automata)",
+   "revision_id": 72772,
+   "reasons": [
+    "category:NieR:Automata"
+   ]
+  },
+  {
+   "page_id": 6970,
+   "title": "Flooded City",
+   "revision_id": 56878,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 6995,
+   "title": "Flooded City/Gambler's Colosseum",
+   "revision_id": 69908,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 7930,
+   "title": "Flooded City/Soul Box",
+   "revision_id": 69599,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 13883,
+   "title": "Flowers for m(A)chines",
+   "revision_id": 72290,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 8925,
+   "title": "Forbidden Fruit",
+   "revision_id": 69254,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8812,
+   "title": "Forest Access Key",
+   "revision_id": 69525,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4959,
+   "title": "Forest Castle",
+   "revision_id": 65298,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 4951,
+   "title": "Forest Zone",
+   "revision_id": 56875,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 7922,
+   "title": "Forest Zone/Meat Box",
+   "revision_id": 69598,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 6593,
+   "title": "Forest Zone/Underground Colosseum",
+   "revision_id": 50067,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 5893,
+   "title": "Freshwater Ray",
+   "revision_id": 69804,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5921,
+   "title": "Freshwater Ray Machine",
+   "revision_id": 69837,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4672,
+   "title": "Friedrich",
+   "revision_id": 72908,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Special Unit Machines"
+   ]
+  },
+  {
+   "page_id": 6725,
+   "title": "Fuel Filter",
+   "revision_id": 69523,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16770,
+   "title": "Full Recovery",
+   "revision_id": 69211,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5892,
+   "title": "Fur Carp",
+   "revision_id": 69802,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6510,
+   "title": "Gambler's Colosseum",
+   "revision_id": 69105,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 7189,
+   "title": "Game Dev Machine Lv.1",
+   "revision_id": 69130,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 7190,
+   "title": "Game Dev Machine Lv.2",
+   "revision_id": 69131,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 7191,
+   "title": "Game Dev Machine Lv.3",
+   "revision_id": 69132,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 5924,
+   "title": "Gas Cylinder",
+   "revision_id": 69844,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 7116,
+   "title": "Gathering Keepsakes",
+   "revision_id": 69156,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 6595,
+   "title": "Giant Egg (Automata)",
+   "revision_id": 69434,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4810,
+   "title": "Gold Goliath Biped",
+   "revision_id": 33524,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Peculiar Machines"
+   ]
+  },
+  {
+   "page_id": 8858,
+   "title": "Gold Ore (Automata)",
+   "revision_id": 69165,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6854,
+   "title": "Gold Tank",
+   "revision_id": 33525,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Peculiar Machines"
+   ]
+  },
+  {
+   "page_id": 8750,
+   "title": "Golden Hair",
+   "revision_id": 70070,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4811,
+   "title": "Golden Units",
+   "revision_id": 54839,
+   "reasons": [
+    "category:NieR: Automata Units"
+   ]
+  },
+  {
+   "page_id": 4702,
+   "title": "Goliath Biped/Desert",
+   "revision_id": 70821,
+   "reasons": [
+    "category:Desert Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4704,
+   "title": "Goliath Biped/EMP",
+   "revision_id": 42133,
+   "reasons": [
+    "category:EMP Attack Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 9967,
+   "title": "Goliath Biped/Enhanced",
+   "revision_id": 42129,
+   "reasons": [
+    "manual"
+   ]
+  },
+  {
+   "page_id": 4714,
+   "title": "Goliath Biped/Enhanced/Basic",
+   "revision_id": 42130,
+   "reasons": [
+    "category:Enhanced Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 9966,
+   "title": "Goliath Biped/Enhanced/Enhanced Legpower Model",
+   "revision_id": 42128,
+   "reasons": [
+    "category:Enhanced Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4706,
+   "title": "Goliath Biped/Forest",
+   "revision_id": 71084,
+   "reasons": [
+    "category:Forest Kingdom Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4708,
+   "title": "Goliath Biped/Standard",
+   "revision_id": 70423,
+   "reasons": [
+    "manual"
+   ]
+  },
+  {
+   "page_id": 9964,
+   "title": "Goliath Biped/Standard/Basic",
+   "revision_id": 70605,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Standard Machines"
+   ]
+  },
+  {
+   "page_id": 9965,
+   "title": "Goliath Biped/Standard/Enhanced Legpower Model",
+   "revision_id": 42119,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Standard Machines"
+   ]
+  },
+  {
+   "page_id": 4710,
+   "title": "Goliath Biped/Village",
+   "revision_id": 42122,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Village Machines"
+   ]
+  },
+  {
+   "page_id": 3666,
+   "title": "Goliath Flyer",
+   "revision_id": 66475,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "category:NieR:Automata Units",
+    "category:Special Unit Machines"
+   ]
+  },
+  {
+   "page_id": 4743,
+   "title": "Goliath Tank (Desert)",
+   "revision_id": 33523,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Peculiar Machines"
+   ]
+  },
+  {
+   "page_id": 4004,
+   "title": "Goliath Tank (Park)",
+   "revision_id": 66498,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Special Unit Machines"
+   ]
+  },
+  {
+   "page_id": 3992,
+   "title": "Goliath Tank (Standard)",
+   "revision_id": 66499,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "category:NieR:Automata Units",
+    "category:Special Unit Machines"
+   ]
+  },
+  {
+   "page_id": 4804,
+   "title": "Gravekeeper",
+   "revision_id": 33513,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Peculiar Machines"
+   ]
+  },
+  {
+   "page_id": 4156,
+   "title": "Green Hair",
+   "revision_id": 69896,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 2042,
+   "title": "Grimoire Weiss",
+   "revision_id": 71822,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 6763,
+   "title": "Grimoire Weiss (Item)",
+   "revision_id": 69597,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3775,
+   "title": "Grün",
+   "revision_id": 66465,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "category:NieR:Automata Units",
+    "category:Special Unit Machines"
+   ]
+  },
+  {
+   "page_id": 6365,
+   "title": "Gunman Biped",
+   "revision_id": 33521,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Peculiar Machines"
+   ]
+  },
+  {
+   "page_id": 4815,
+   "title": "Gunman Flyer",
+   "revision_id": 37508,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Peculiar Machines"
+   ]
+  },
+  {
+   "page_id": 4817,
+   "title": "Gunman Stubby",
+   "revision_id": 37509,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Peculiar Machines"
+   ]
+  },
+  {
+   "page_id": 7162,
+   "title": "Half-wit Inventor",
+   "revision_id": 70136,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 2629,
+   "title": "Hamelin Organization",
+   "revision_id": 72901,
+   "reasons": [
+    "category:Organizations"
+   ]
+  },
+  {
+   "page_id": 4807,
+   "title": "Hateful Sister",
+   "revision_id": 60863,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Peculiar Machines"
+   ]
+  },
+  {
+   "page_id": 13907,
+   "title": "Head(Y) battle",
+   "revision_id": 72314,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 6572,
+   "title": "Heavy Armor A",
+   "revision_id": 69605,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6575,
+   "title": "Heavy Armor B",
+   "revision_id": 69606,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3778,
+   "title": "Hegel",
+   "revision_id": 72872,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "category:NieR:Automata Units",
+    "category:Special Unit Machines"
+   ]
+  },
+  {
+   "page_id": 6845,
+   "title": "Heritage of the Past",
+   "revision_id": 69148,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 6850,
+   "title": "High-speed Machine",
+   "revision_id": 71245,
+   "reasons": [
+    "category:Amicable Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 5903,
+   "title": "Horseshoe Crab",
+   "revision_id": 69814,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5918,
+   "title": "Horseshoe Crab Machine",
+   "revision_id": 69834,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 17222,
+   "title": "Human",
+   "revision_id": 72387,
+   "reasons": [
+    "manual"
+   ]
+  },
+  {
+   "page_id": 5093,
+   "title": "Human Server Records",
+   "revision_id": 70086,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 13889,
+   "title": "Hun(G)ry for knowledge",
+   "revision_id": 72296,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 7111,
+   "title": "Idiot Savant",
+   "revision_id": 69129,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 3735,
+   "title": "Immanuel",
+   "revision_id": 66482,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Special Unit Machines"
+   ]
+  },
+  {
+   "page_id": 16801,
+   "title": "Impact Bracer (L)",
+   "revision_id": 69249,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16800,
+   "title": "Impact Bracer (S)",
+   "revision_id": 69248,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 7110,
+   "title": "Improving Communications",
+   "revision_id": 69120,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 5094,
+   "title": "Infant Machine's Memories",
+   "revision_id": 66799,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 7060,
+   "title": "Investigating Communications",
+   "revision_id": 70007,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 4968,
+   "title": "Iron Ore (Automata)",
+   "revision_id": 69169,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5079,
+   "title": "Iron Pipe (Automata)",
+   "revision_id": 69744,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 8716,
+   "title": "Iron Pipe (Automata)/SINoALICE",
+   "revision_id": 30849,
+   "reasons": [
+    "subpage:Iron Pipe (Automata)"
+   ]
+  },
+  {
+   "page_id": 6672,
+   "title": "Iron Will (Automata)",
+   "revision_id": 69757,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 3931,
+   "title": "Items (Automata)",
+   "revision_id": 70306,
+   "reasons": [
+    "category:NieR:Automata"
+   ]
+  },
+  {
+   "page_id": 5435,
+   "title": "Jackass",
+   "revision_id": 72420,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 6634,
+   "title": "Jackass's Bomb Recipe",
+   "revision_id": 66824,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 7128,
+   "title": "Jackass's Research",
+   "revision_id": 69902,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 3709,
+   "title": "Jean-Paul",
+   "revision_id": 71353,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Village Machines"
+   ]
+  },
+  {
+   "page_id": 6726,
+   "title": "Jean-Paul's Letter",
+   "revision_id": 69530,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3966,
+   "title": "Jean-Paul's Melancholy",
+   "revision_id": 69100,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 6849,
+   "title": "Juliet",
+   "revision_id": 71241,
+   "reasons": [
+    "category:Amicable Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 13897,
+   "title": "Just y(O)u and me",
+   "revision_id": 72304,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 4009,
+   "title": "Kierkegaard",
+   "revision_id": 66483,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Special Unit Machines"
+   ]
+  },
+  {
+   "page_id": 5888,
+   "title": "Killifish",
+   "revision_id": 69798,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5907,
+   "title": "Killifish Machine",
+   "revision_id": 69821,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3683,
+   "title": "Ko-Shi",
+   "revision_id": 72866,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "category:NieR:Automata Units",
+    "category:Special Unit Machines"
+   ]
+  },
+  {
+   "page_id": 3681,
+   "title": "Ko-Shi & Ro-Shi",
+   "revision_id": 66495,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "category:NieR:Automata Units",
+    "category:Special Unit Machines"
+   ]
+  },
+  {
+   "page_id": 5891,
+   "title": "Koi Carp",
+   "revision_id": 69801,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5908,
+   "title": "Koi Carp Machine",
+   "revision_id": 69822,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16957,
+   "title": "Lab",
+   "revision_id": 70736,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 8893,
+   "title": "Large Battery",
+   "revision_id": 69387,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16799,
+   "title": "Large G Luck+",
+   "revision_id": 69244,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8865,
+   "title": "Large Gear (Automata)",
+   "revision_id": 69345,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16769,
+   "title": "Large Recovery",
+   "revision_id": 69268,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16876,
+   "title": "Letter for Jean-Paul",
+   "revision_id": 69928,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6633,
+   "title": "Letter to the Forest King",
+   "revision_id": 66827,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 2199,
+   "title": "Library",
+   "revision_id": 67366,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 5088,
+   "title": "Library Index",
+   "revision_id": 69450,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 2908,
+   "title": "Library/Trophy Room",
+   "revision_id": 67364,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 8756,
+   "title": "Light Blue Hair",
+   "revision_id": 70039,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6585,
+   "title": "Light Purple Hair",
+   "revision_id": 70038,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8759,
+   "title": "Lime Green Hair",
+   "revision_id": 70069,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6910,
+   "title": "Linked-sphere Type (Enhanced)",
+   "revision_id": 44343,
+   "reasons": [
+    "category:Enhanced Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 6873,
+   "title": "Linked-sphere Type (Standard)",
+   "revision_id": 70796,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Standard Machines"
+   ]
+  },
+  {
+   "page_id": 4753,
+   "title": "Little Sister Machine",
+   "revision_id": 66836,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Village Machines",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 4492,
+   "title": "Logic Virus",
+   "revision_id": 71814,
+   "reasons": [
+    "manual"
+   ]
+  },
+  {
+   "page_id": 4934,
+   "title": "Lord of the Valley",
+   "revision_id": 70035,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 7047,
+   "title": "Lost Girl",
+   "revision_id": 67062,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 8889,
+   "title": "Lovely Choker",
+   "revision_id": 69499,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6492,
+   "title": "Lunar Tear (Automata)",
+   "revision_id": 70778,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3653,
+   "title": "Machine",
+   "revision_id": 72696,
+   "reasons": [
+    "manual"
+   ]
+  },
+  {
+   "page_id": 8844,
+   "title": "Machine Arm",
+   "revision_id": 69724,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3719,
+   "title": "Machine Axe",
+   "revision_id": 69767,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 4974,
+   "title": "Machine Core",
+   "revision_id": 69859,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3927,
+   "title": "Machine Examination 1",
+   "revision_id": 69962,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 3964,
+   "title": "Machine Examination 2",
+   "revision_id": 69967,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 16874,
+   "title": "Machine Fossil",
+   "revision_id": 69926,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8848,
+   "title": "Machine Head",
+   "revision_id": 69720,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3716,
+   "title": "Machine Heads",
+   "revision_id": 69784,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 8846,
+   "title": "Machine Leg",
+   "revision_id": 69722,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5922,
+   "title": "Machine Lifeform Head",
+   "revision_id": 69843,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8772,
+   "title": "Machine Mask",
+   "revision_id": 69614,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16759,
+   "title": "Machine Oil (Automata)",
+   "revision_id": 69505,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8809,
+   "title": "Machine Part",
+   "revision_id": 69547,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5101,
+   "title": "Machine Research Report",
+   "revision_id": 70085,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 3720,
+   "title": "Machine Spear",
+   "revision_id": 69776,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 3715,
+   "title": "Machine Sword",
+   "revision_id": 69754,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 8847,
+   "title": "Machine Torso",
+   "revision_id": 69721,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4661,
+   "title": "Machine in Love",
+   "revision_id": 66807,
+   "reasons": [
+    "category:Amicable Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4663,
+   "title": "Machine with Makeup",
+   "revision_id": 66808,
+   "reasons": [
+    "category:Amicable Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 6847,
+   "title": "Machine with a Dream",
+   "revision_id": 71242,
+   "reasons": [
+    "category:Amicable Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 5902,
+   "title": "Mackerel",
+   "revision_id": 69813,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5917,
+   "title": "Mackerel Machine",
+   "revision_id": 69833,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 15125,
+   "title": "Mama (Item)",
+   "revision_id": 69665,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8811,
+   "title": "Man's Journal",
+   "revision_id": 69533,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3663,
+   "title": "Marx",
+   "revision_id": 66464,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "category:NieR:Automata Units",
+    "category:Special Unit Machines"
+   ]
+  },
+  {
+   "page_id": 3946,
+   "title": "Masamune",
+   "revision_id": 70276,
+   "reasons": [
+    "category:Amicable Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 6591,
+   "title": "Masamune Mask",
+   "revision_id": 69683,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4168,
+   "title": "Matsuda Mask",
+   "revision_id": 69625,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 13900,
+   "title": "Mave(R)ick",
+   "revision_id": 72307,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 13885,
+   "title": "Meaningless (C)ode",
+   "revision_id": 72292,
+   "reasons": [
+    "link:main_page",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 8806,
+   "title": "Medical Journal",
+   "revision_id": 69546,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4850,
+   "title": "Medium Biped (Desert)",
+   "revision_id": 71023,
+   "reasons": [
+    "category:Desert Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4864,
+   "title": "Medium Biped (EMP)",
+   "revision_id": 44326,
+   "reasons": [
+    "category:EMP Attack Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4862,
+   "title": "Medium Biped (Enhanced)",
+   "revision_id": 44344,
+   "reasons": [
+    "category:Enhanced Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4858,
+   "title": "Medium Biped (Factory)",
+   "revision_id": 44305,
+   "reasons": [
+    "category:Factory Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4856,
+   "title": "Medium Biped (Forest)",
+   "revision_id": 71082,
+   "reasons": [
+    "category:Forest Kingdom Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4852,
+   "title": "Medium Biped (Park)",
+   "revision_id": 71075,
+   "reasons": [
+    "category:Amusement Park Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4846,
+   "title": "Medium Biped (Standard)",
+   "revision_id": 70324,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Standard Machines"
+   ]
+  },
+  {
+   "page_id": 4860,
+   "title": "Medium Biped (Village)",
+   "revision_id": 71012,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Village Machines"
+   ]
+  },
+  {
+   "page_id": 6864,
+   "title": "Medium Exploder",
+   "revision_id": 70450,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Standard Machines"
+   ]
+  },
+  {
+   "page_id": 6881,
+   "title": "Medium Flyer (Desert)",
+   "revision_id": 70822,
+   "reasons": [
+    "category:Desert Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 6908,
+   "title": "Medium Flyer (Enhanced)",
+   "revision_id": 66676,
+   "reasons": [
+    "category:Enhanced Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 6545,
+   "title": "Medium Flyer (Park)",
+   "revision_id": 71077,
+   "reasons": [
+    "category:Amusement Park Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 6860,
+   "title": "Medium Flyer (Standard)",
+   "revision_id": 70443,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Standard Machines"
+   ]
+  },
+  {
+   "page_id": 6905,
+   "title": "Medium Quadruped (Enhanced)",
+   "revision_id": 65416,
+   "reasons": [
+    "category:Enhanced Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 8117,
+   "title": "Medium Quadruped (Factory)",
+   "revision_id": 44306,
+   "reasons": [
+    "category:Factory Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 6890,
+   "title": "Medium Quadruped (Forest)",
+   "revision_id": 71083,
+   "reasons": [
+    "category:Forest Kingdom Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 5295,
+   "title": "Medium Quadruped (Standard)",
+   "revision_id": 70411,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Standard Machines"
+   ]
+  },
+  {
+   "page_id": 4300,
+   "title": "Medium Recovery",
+   "revision_id": 69267,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16775,
+   "title": "Melee Attack Up (L)",
+   "revision_id": 70138,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16778,
+   "title": "Melee Attack Up (S)",
+   "revision_id": 70137,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16791,
+   "title": "Melee Defense Up (L)",
+   "revision_id": 69277,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16790,
+   "title": "Melee Defense Up (S)",
+   "revision_id": 69276,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8855,
+   "title": "Memory Alloy (Automata)",
+   "revision_id": 69719,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8810,
+   "title": "Memory Chip",
+   "revision_id": 69532,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8884,
+   "title": "Meteorite (Automata)",
+   "revision_id": 69410,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8886,
+   "title": "Meteorite Shard",
+   "revision_id": 69411,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 13888,
+   "title": "Mission (F)ailed",
+   "revision_id": 72295,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 4978,
+   "title": "Moldavite (Automata)",
+   "revision_id": 69181,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4265,
+   "title": "Monster Type",
+   "revision_id": 58750,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Peculiar Machines"
+   ]
+  },
+  {
+   "page_id": 13420,
+   "title": "Moon",
+   "revision_id": 72791,
+   "reasons": [
+    "manual"
+   ]
+  },
+  {
+   "page_id": 8836,
+   "title": "Moose Meat",
+   "revision_id": 69493,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4749,
+   "title": "Mother Machine",
+   "revision_id": 71017,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Village Machines"
+   ]
+  },
+  {
+   "page_id": 2185,
+   "title": "Mounts",
+   "revision_id": 61897,
+   "reasons": [
+    "category:NieR:Automata"
+   ]
+  },
+  {
+   "page_id": 6906,
+   "title": "Multi-leg Medium Model (Enhanced)",
+   "revision_id": 44347,
+   "reasons": [
+    "category:Enhanced Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 6858,
+   "title": "Multi-leg Medium Model (Standard)",
+   "revision_id": 70412,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Standard Machines"
+   ]
+  },
+  {
+   "page_id": 4683,
+   "title": "Multi-tier Type (Enhanced)",
+   "revision_id": 44348,
+   "reasons": [
+    "category:Enhanced Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4678,
+   "title": "Multi-tier Type (Standard)",
+   "revision_id": 70083,
+   "reasons": [
+    "category:Standard Machines"
+   ]
+  },
+  {
+   "page_id": 4676,
+   "title": "Multi-tier Type (Village)",
+   "revision_id": 71010,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Village Machines"
+   ]
+  },
+  {
+   "page_id": 8873,
+   "title": "Mushroom",
+   "revision_id": 69426,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5056,
+   "title": "Mysterious Invitation",
+   "revision_id": 67087,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 6506,
+   "title": "Mysterious Letter",
+   "revision_id": 70052,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 6687,
+   "title": "Mysterious Lithograph 1",
+   "revision_id": 70101,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 6469,
+   "title": "Mysterious Lithograph 2",
+   "revision_id": 70102,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 6685,
+   "title": "Mysterious Lithograph 3",
+   "revision_id": 70103,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 6689,
+   "title": "Mysterious Lithograph 4",
+   "revision_id": 70104,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 2630,
+   "title": "National Weapons Research Laboratory",
+   "revision_id": 61821,
+   "reasons": [
+    "category:Organizations"
+   ]
+  },
+  {
+   "page_id": 16754,
+   "title": "Natural Rubber (Automata)",
+   "revision_id": 69513,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 9036,
+   "title": "Neon Blue Hair",
+   "revision_id": 70075,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 9030,
+   "title": "Neon Green Hair",
+   "revision_id": 70076,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 9029,
+   "title": "Neon Pink Hair",
+   "revision_id": 70078,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 9033,
+   "title": "Neon Purple Hair",
+   "revision_id": 70077,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 9039,
+   "title": "Neon White Hair",
+   "revision_id": 70074,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 9042,
+   "title": "Neon Yellow Hair",
+   "revision_id": 70073,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8867,
+   "title": "New Bolt",
+   "revision_id": 69716,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6702,
+   "title": "Newspaper Scrap",
+   "revision_id": 66766,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 13982,
+   "title": "NieR Music Concert CD: The Memories of Puppets",
+   "revision_id": 65925,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 15789,
+   "title": "NieR: Automata Black Box Edition Artbook",
+   "revision_id": 65704,
+   "reasons": [
+    "category:NieR:Automata"
+   ]
+  },
+  {
+   "page_id": 3439,
+   "title": "NieR:Automata",
+   "revision_id": 72288,
+   "reasons": [
+    "link:main_page"
+   ]
+  },
+  {
+   "page_id": 13882,
+   "title": "NieR:Automata/Endings",
+   "revision_id": 72289,
+   "reasons": [
+    "subpage:NieR:Automata"
+   ]
+  },
+  {
+   "page_id": 13891,
+   "title": "No (I) in team",
+   "revision_id": 72298,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 5307,
+   "title": "Nuclear Arms Manual",
+   "revision_id": 72170,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 8813,
+   "title": "Ocean Access Key",
+   "revision_id": 69527,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5895,
+   "title": "Oil Sardine",
+   "revision_id": 69807,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3590,
+   "title": "Operator 21O",
+   "revision_id": 72744,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "link:main_page",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 3589,
+   "title": "Operator 6O",
+   "revision_id": 72988,
+   "reasons": [
+    "link:main_page",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 13884,
+   "title": "Or not to (B)e",
+   "revision_id": 72291,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 13908,
+   "title": "Over(Z)ealous",
+   "revision_id": 72315,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 15113,
+   "title": "P2's Body Replica",
+   "revision_id": 69672,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16881,
+   "title": "Package",
+   "revision_id": 69948,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6683,
+   "title": "Paper Attached to Vehicle",
+   "revision_id": 66777,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 7107,
+   "title": "Parade Escort",
+   "revision_id": 69155,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 8814,
+   "title": "Park Access Key",
+   "revision_id": 69528,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3588,
+   "title": "Pascal",
+   "revision_id": 72990,
+   "reasons": [
+    "link:main_page",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 4029,
+   "title": "Pascal (Unit)",
+   "revision_id": 71016,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Village Machines"
+   ]
+  },
+  {
+   "page_id": 16763,
+   "title": "Pascal's Book",
+   "revision_id": 71332,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16693,
+   "title": "Pascal's Core",
+   "revision_id": 69516,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 7094,
+   "title": "Pascal's Village",
+   "revision_id": 70600,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 8753,
+   "title": "Pastel Pink Hair",
+   "revision_id": 70071,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8881,
+   "title": "Pearl (Automata)",
+   "revision_id": 69258,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5313,
+   "title": "Pearl Harbor Descent Summary",
+   "revision_id": 67989,
+   "reasons": [
+    "category:NieR:Automata Archives",
+    "category:Pearl Harbor Descent Records"
+   ]
+  },
+  {
+   "page_id": 3994,
+   "title": "Peculiar Machines",
+   "revision_id": 18970,
+   "reasons": [
+    "category:NieR: Automata Units"
+   ]
+  },
+  {
+   "page_id": 2471,
+   "title": "Phoenix Dagger (Automata)",
+   "revision_id": 69747,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 6662,
+   "title": "Phoenix Lance",
+   "revision_id": 69768,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 5155,
+   "title": "Phoenix Sword (Automata)",
+   "revision_id": 69760,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 7089,
+   "title": "Photographs",
+   "revision_id": 70170,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 8766,
+   "title": "Pink Ribbon",
+   "revision_id": 69612,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8871,
+   "title": "Plant Seed",
+   "revision_id": 69420,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4525,
+   "title": "Plato 1728",
+   "revision_id": 71435,
+   "reasons": [
+    "link:main_page"
+   ]
+  },
+  {
+   "page_id": 7235,
+   "title": "Play with Us!",
+   "revision_id": 69417,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 3586,
+   "title": "Pod 042",
+   "revision_id": 72542,
+   "reasons": [
+    "link:main_page",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 3587,
+   "title": "Pod 153",
+   "revision_id": 71835,
+   "reasons": [
+    "link:main_page",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 2160,
+   "title": "Popola",
+   "revision_id": 72378,
+   "reasons": [
+    "link:main_page",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 7869,
+   "title": "Popola's Booze",
+   "revision_id": 70140,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5061,
+   "title": "Popola's Errand",
+   "revision_id": 69144,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 16746,
+   "title": "Powerup Part L",
+   "revision_id": 69512,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16750,
+   "title": "Powerup Part M",
+   "revision_id": 69511,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16742,
+   "title": "Powerup Part S",
+   "revision_id": 69510,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8890,
+   "title": "Precious Earrings",
+   "revision_id": 69500,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16703,
+   "title": "Pristine Cable",
+   "revision_id": 69386,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3930,
+   "title": "Pristine Screw",
+   "revision_id": 69341,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5084,
+   "title": "Project Gestalt Report 1",
+   "revision_id": 70087,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 6486,
+   "title": "Project Gestalt Report 10",
+   "revision_id": 70096,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 6487,
+   "title": "Project Gestalt Report 11",
+   "revision_id": 70097,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 6470,
+   "title": "Project Gestalt Report 2",
+   "revision_id": 70088,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 6471,
+   "title": "Project Gestalt Report 3",
+   "revision_id": 70089,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 6475,
+   "title": "Project Gestalt Report 4",
+   "revision_id": 71481,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 6476,
+   "title": "Project Gestalt Report 5",
+   "revision_id": 70091,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 6477,
+   "title": "Project Gestalt Report 6",
+   "revision_id": 70092,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 6478,
+   "title": "Project Gestalt Report 7",
+   "revision_id": 70093,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 6479,
+   "title": "Project Gestalt Report 8",
+   "revision_id": 70094,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 6482,
+   "title": "Project Gestalt Report 9",
+   "revision_id": 70095,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 6587,
+   "title": "Proof of Oath",
+   "revision_id": 69682,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4972,
+   "title": "Pure Water",
+   "revision_id": 69203,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4162,
+   "title": "Purple Hair",
+   "revision_id": 69929,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16714,
+   "title": "Pyrite (Automata)",
+   "revision_id": 69898,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8800,
+   "title": "Quality Sachet",
+   "revision_id": 69563,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 7907,
+   "title": "Quests (Automata)",
+   "revision_id": 69788,
+   "reasons": [
+    "category:NieR:Automata"
+   ]
+  },
+  {
+   "page_id": 3738,
+   "title": "R010: Laser",
+   "revision_id": 66469,
+   "reasons": [
+    "category:NieR:Automata Pod Programs",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 3783,
+   "title": "R020: Mirage",
+   "revision_id": 32970,
+   "reasons": [
+    "category:NieR:Automata Pod Programs",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 3795,
+   "title": "R030: Hammer",
+   "revision_id": 32969,
+   "reasons": [
+    "category:NieR:Automata Pod Programs",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 3785,
+   "title": "R040: Blade",
+   "revision_id": 34999,
+   "reasons": [
+    "category:NieR:Automata Pod Programs",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 3787,
+   "title": "R050: Spear",
+   "revision_id": 69894,
+   "reasons": [
+    "category:NieR:Automata Pod Programs",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 3791,
+   "title": "R070: M Shield",
+   "revision_id": 32966,
+   "reasons": [
+    "category:NieR:Automata Pod Programs",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 6698,
+   "title": "Ragged DVD",
+   "revision_id": 66778,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 6886,
+   "title": "Rampaging Medium Biped (Park)",
+   "revision_id": 71079,
+   "reasons": [
+    "category:Amusement Park Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4719,
+   "title": "Rampaging Medium Biped (Standard)",
+   "revision_id": 70799,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Standard Machines"
+   ]
+  },
+  {
+   "page_id": 6885,
+   "title": "Rampaging Small Biped (Park)",
+   "revision_id": 71078,
+   "reasons": [
+    "category:Amusement Park Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 6877,
+   "title": "Rampaging Small Biped (Standard)",
+   "revision_id": 70798,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Standard Machines"
+   ]
+  },
+  {
+   "page_id": 4767,
+   "title": "Rampaging Small Stubby",
+   "revision_id": 70797,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Standard Machines"
+   ]
+  },
+  {
+   "page_id": 16789,
+   "title": "Ranged Attack Up (L)",
+   "revision_id": 69275,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16788,
+   "title": "Ranged Attack Up (S)",
+   "revision_id": 69274,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16792,
+   "title": "Ranged Defense Up (L)",
+   "revision_id": 69279,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16793,
+   "title": "Ranged Defense Up (S)",
+   "revision_id": 69278,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 13904,
+   "title": "Reckless bra(V)ery",
+   "revision_id": 72311,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 7269,
+   "title": "Reconnaissance Squad",
+   "revision_id": 69142,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 5095,
+   "title": "Record of a Bestial Machine",
+   "revision_id": 66792,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 4183,
+   "title": "Record: 3C3C1D119440927",
+   "revision_id": 69581,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4174,
+   "title": "Record: CEO",
+   "revision_id": 69582,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3989,
+   "title": "Red Girl",
+   "revision_id": 72992,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "category:NieR:Automata Units",
+    "category:Special Unit Machines",
+    "link:main_page"
+   ]
+  },
+  {
+   "page_id": 4150,
+   "title": "Red Hair",
+   "revision_id": 70028,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 15123,
+   "title": "Remnant Flower Bauble",
+   "revision_id": 69677,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 14107,
+   "title": "Resistance",
+   "revision_id": 72911,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:Organizations"
+   ]
+  },
+  {
+   "page_id": 3652,
+   "title": "Resistance Camp",
+   "revision_id": 67219,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 6228,
+   "title": "Resistance Disappearance",
+   "revision_id": 69903,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 5414,
+   "title": "Resistance: Anemone",
+   "revision_id": 66839,
+   "reasons": [
+    "category:NieR:Automata Archives",
+    "category:Pearl Harbor Descent Records"
+   ]
+  },
+  {
+   "page_id": 5309,
+   "title": "Resistance: Rose",
+   "revision_id": 70099,
+   "reasons": [
+    "category:NieR:Automata Archives",
+    "category:Pearl Harbor Descent Records"
+   ]
+  },
+  {
+   "page_id": 7069,
+   "title": "Retrieve the Confidential Intel",
+   "revision_id": 69958,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 9628,
+   "title": "Retro Grey Pod",
+   "revision_id": 69594,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 9627,
+   "title": "Retro Red Pod",
+   "revision_id": 69595,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4045,
+   "title": "Revealing Outfit",
+   "revision_id": 70912,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4793,
+   "title": "Reverse-jointed Goliath",
+   "revision_id": 70441,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Standard Machines"
+   ]
+  },
+  {
+   "page_id": 6907,
+   "title": "Reverse-jointed Goliath (Enhanced)",
+   "revision_id": 71045,
+   "reasons": [
+    "category:Enhanced Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 16757,
+   "title": "Rigid Tree Bark",
+   "revision_id": 68978,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4278,
+   "title": "Ro-Shi",
+   "revision_id": 66494,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "category:NieR:Automata Units",
+    "category:Special Unit Machines"
+   ]
+  },
+  {
+   "page_id": 6609,
+   "title": "Robo Dojo—Black Belt",
+   "revision_id": 69110,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 6608,
+   "title": "Robo Dojo—Brown Belt",
+   "revision_id": 69109,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 6612,
+   "title": "Robo Dojo—Red Belt",
+   "revision_id": 69112,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 6610,
+   "title": "Robo Dojo—Red and White Belt",
+   "revision_id": 69111,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 6423,
+   "title": "Robo Dojo—White Belt",
+   "revision_id": 69108,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 6848,
+   "title": "Romeo",
+   "revision_id": 71240,
+   "reasons": [
+    "category:Amicable Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 6682,
+   "title": "Rotten Info Sheet",
+   "revision_id": 66772,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 8856,
+   "title": "Rusted Clump (Automata)",
+   "revision_id": 69321,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8866,
+   "title": "Rusty Bolt",
+   "revision_id": 69717,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16873,
+   "title": "Rusty Music Box",
+   "revision_id": 69925,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8799,
+   "title": "Sachet",
+   "revision_id": 69561,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4051,
+   "title": "Sand Mask",
+   "revision_id": 69623,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4171,
+   "title": "Sato Mask",
+   "revision_id": 69626,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4756,
+   "title": "Scientist Machine",
+   "revision_id": 71020,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Village Machines"
+   ]
+  },
+  {
+   "page_id": 9090,
+   "title": "Severed Cable (Automata)",
+   "revision_id": 69376,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8887,
+   "title": "Shattered Earring",
+   "revision_id": 69497,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5096,
+   "title": "Shipping Records",
+   "revision_id": 66795,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 4970,
+   "title": "Silver Ore (Automata)",
+   "revision_id": 69250,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3655,
+   "title": "Simone",
+   "revision_id": 71841,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "category:NieR:Automata Units",
+    "category:Special Unit Machines"
+   ]
+  },
+  {
+   "page_id": 7037,
+   "title": "Simone/SINoALICE",
+   "revision_id": 23661,
+   "reasons": [
+    "subpage:Simone"
+   ]
+  },
+  {
+   "page_id": 16730,
+   "title": "Simple Gadget",
+   "revision_id": 69507,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16776,
+   "title": "Skill Salve (L)",
+   "revision_id": 69193,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16777,
+   "title": "Skill Salve (S)",
+   "revision_id": 69245,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4773,
+   "title": "Small Biped (Desert)",
+   "revision_id": 71024,
+   "reasons": [
+    "category:Desert Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4787,
+   "title": "Small Biped (EMP)",
+   "revision_id": 44327,
+   "reasons": [
+    "category:EMP Attack Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4785,
+   "title": "Small Biped (Enhanced)",
+   "revision_id": 71044,
+   "reasons": [
+    "category:Enhanced Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4783,
+   "title": "Small Biped (Factory)",
+   "revision_id": 44307,
+   "reasons": [
+    "category:Factory Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4778,
+   "title": "Small Biped (Forest)",
+   "revision_id": 71081,
+   "reasons": [
+    "category:Forest Kingdom Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4776,
+   "title": "Small Biped (Park)",
+   "revision_id": 70886,
+   "reasons": [
+    "category:Amusement Park Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4771,
+   "title": "Small Biped (Standard)",
+   "revision_id": 70269,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Standard Machines"
+   ]
+  },
+  {
+   "page_id": 4780,
+   "title": "Small Biped (Village)",
+   "revision_id": 71011,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Village Machines"
+   ]
+  },
+  {
+   "page_id": 6862,
+   "title": "Small Exploder",
+   "revision_id": 70449,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Standard Machines"
+   ]
+  },
+  {
+   "page_id": 4822,
+   "title": "Small Flyer (Desert)",
+   "revision_id": 70823,
+   "reasons": [
+    "category:Desert Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4832,
+   "title": "Small Flyer (Enhanced)",
+   "revision_id": 71046,
+   "reasons": [
+    "category:Enhanced Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4828,
+   "title": "Small Flyer (Factory)",
+   "revision_id": 44308,
+   "reasons": [
+    "category:Factory Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4826,
+   "title": "Small Flyer (Forest)",
+   "revision_id": 71085,
+   "reasons": [
+    "category:Forest Kingdom Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4824,
+   "title": "Small Flyer (Park)",
+   "revision_id": 71076,
+   "reasons": [
+    "category:Amusement Park Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4820,
+   "title": "Small Flyer (Standard)",
+   "revision_id": 70442,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Standard Machines"
+   ]
+  },
+  {
+   "page_id": 4830,
+   "title": "Small Flyer (Village)",
+   "revision_id": 71013,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Village Machines"
+   ]
+  },
+  {
+   "page_id": 16798,
+   "title": "Small G Luck+",
+   "revision_id": 70601,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8863,
+   "title": "Small Gear",
+   "revision_id": 69343,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4287,
+   "title": "Small Recovery",
+   "revision_id": 69266,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5305,
+   "title": "Small Shoe",
+   "revision_id": 69537,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6909,
+   "title": "Small Sphere (Enhanced)",
+   "revision_id": 60866,
+   "reasons": [
+    "category:Enhanced Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 6868,
+   "title": "Small Sphere (Standard)",
+   "revision_id": 70795,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Standard Machines"
+   ]
+  },
+  {
+   "page_id": 6892,
+   "title": "Small Sphere (Village)",
+   "revision_id": 71014,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Village Machines"
+   ]
+  },
+  {
+   "page_id": 4700,
+   "title": "Small Stubby (Desert)",
+   "revision_id": 70814,
+   "reasons": [
+    "category:Desert Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4732,
+   "title": "Small Stubby (EMP)",
+   "revision_id": 66192,
+   "reasons": [
+    "category:EMP Attack Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4730,
+   "title": "Small Stubby (Enhanced)",
+   "revision_id": 71047,
+   "reasons": [
+    "category:Enhanced Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4726,
+   "title": "Small Stubby (Factory)",
+   "revision_id": 44309,
+   "reasons": [
+    "category:Factory Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4723,
+   "title": "Small Stubby (Forest)",
+   "revision_id": 71080,
+   "reasons": [
+    "category:Forest Kingdom Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 6884,
+   "title": "Small Stubby (Park)",
+   "revision_id": 70885,
+   "reasons": [
+    "category:Amusement Park Machines",
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 6440,
+   "title": "Small Stubby (Standard)",
+   "revision_id": 70082,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Standard Machines"
+   ]
+  },
+  {
+   "page_id": 4728,
+   "title": "Small Stubby (Village)",
+   "revision_id": 71009,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Village Machines"
+   ]
+  },
+  {
+   "page_id": 4674,
+   "title": "So-Shi",
+   "revision_id": 66480,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "category:NieR:Automata Units",
+    "category:Special Unit Machines"
+   ]
+  },
+  {
+   "page_id": 7067,
+   "title": "Sorting Trouble",
+   "revision_id": 69945,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 7121,
+   "title": "Sorting Trouble 2",
+   "revision_id": 69946,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 7122,
+   "title": "Sorting Trouble 3",
+   "revision_id": 69153,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 6737,
+   "title": "Sound Data 1",
+   "revision_id": 69571,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6738,
+   "title": "Sound Data 2",
+   "revision_id": 69575,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6739,
+   "title": "Sound Data 3",
+   "revision_id": 69577,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6740,
+   "title": "Sound Data 4",
+   "revision_id": 69579,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6741,
+   "title": "Sound Data 5",
+   "revision_id": 69580,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5148,
+   "title": "Spear of the Usurper (Automata)",
+   "revision_id": 69771,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 16797,
+   "title": "Speed Salve (L)",
+   "revision_id": 69239,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16796,
+   "title": "Speed Salve (S)",
+   "revision_id": 69240,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 7114,
+   "title": "Speed Star",
+   "revision_id": 69134,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 8807,
+   "title": "Stamp",
+   "revision_id": 70003,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8808,
+   "title": "Stamp Card",
+   "revision_id": 69551,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 7044,
+   "title": "Stamp Collecting",
+   "revision_id": 69991,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 5904,
+   "title": "Starfish",
+   "revision_id": 69817,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5914,
+   "title": "Starfish Machine",
+   "revision_id": 69830,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8786,
+   "title": "Statue of a Girl",
+   "revision_id": 69557,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 7236,
+   "title": "Storage Element",
+   "revision_id": 69127,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 6714,
+   "title": "Strange Doll",
+   "revision_id": 66775,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 8860,
+   "title": "Stretched Coil",
+   "revision_id": 69718,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8862,
+   "title": "Stripped Screw",
+   "revision_id": 69339,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16709,
+   "title": "Sturdy Socket",
+   "revision_id": 69364,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5901,
+   "title": "Swordfish",
+   "revision_id": 69812,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5913,
+   "title": "Swordfish Machine",
+   "revision_id": 69829,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8878,
+   "title": "Tanning Agent",
+   "revision_id": 69488,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6680,
+   "title": "Tattered Pamphlet",
+   "revision_id": 66770,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 5384,
+   "title": "Tech Manual",
+   "revision_id": 69439,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 7062,
+   "title": "Terminal Repairs",
+   "revision_id": 70011,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 13887,
+   "title": "The (E)nd of YoRHa",
+   "revision_id": 72294,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 7058,
+   "title": "The Manager's Request",
+   "revision_id": 69904,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 7119,
+   "title": "The Permanent Recluse",
+   "revision_id": 69161,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 7117,
+   "title": "The Recluse",
+   "revision_id": 69159,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 7118,
+   "title": "The Recluse Stays Home",
+   "revision_id": 69160,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 7054,
+   "title": "The Supply Trader's Request",
+   "revision_id": 69872,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 5059,
+   "title": "The Twins' Request",
+   "revision_id": 69145,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 7050,
+   "title": "The Wandering Couple",
+   "revision_id": 69996,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 7052,
+   "title": "The Weapon Dealer's Request",
+   "revision_id": 69158,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 8877,
+   "title": "Thick Dictionary",
+   "revision_id": 69443,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 13906,
+   "title": "Time to rela(X)",
+   "revision_id": 72313,
+   "reasons": [
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 5923,
+   "title": "Tire",
+   "revision_id": 69845,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8854,
+   "title": "Titanium Alloy (Automata)",
+   "revision_id": 69324,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8802,
+   "title": "Toothbrush",
+   "revision_id": 70059,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8875,
+   "title": "Torn Book",
+   "revision_id": 69435,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3837,
+   "title": "Tower",
+   "revision_id": 66739,
+   "reasons": [
+    "category:NieR:Automata Locations"
+   ]
+  },
+  {
+   "page_id": 6459,
+   "title": "Tower System Outline",
+   "revision_id": 70100,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 16768,
+   "title": "Toy Material",
+   "revision_id": 69015,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4964,
+   "title": "Treasure Hunt at the Castle",
+   "revision_id": 72838,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 8872,
+   "title": "Tree Sap",
+   "revision_id": 69680,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8870,
+   "title": "Tree Seed",
+   "revision_id": 69414,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6509,
+   "title": "Trial of Sand",
+   "revision_id": 69106,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 5332,
+   "title": "Turf War",
+   "revision_id": 70268,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 5887,
+   "title": "Twinfish",
+   "revision_id": 69797,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5898,
+   "title": "Twoface",
+   "revision_id": 69809,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3717,
+   "title": "Type-3 Blade",
+   "revision_id": 70281,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 3850,
+   "title": "Type-3 Fists",
+   "revision_id": 70283,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 3741,
+   "title": "Type-3 Lance",
+   "revision_id": 70279,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 3658,
+   "title": "Type-3 Sword",
+   "revision_id": 69750,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 3705,
+   "title": "Type-4O Blade",
+   "revision_id": 69763,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 3724,
+   "title": "Type-4O Fists",
+   "revision_id": 71239,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 3718,
+   "title": "Type-4O Lance",
+   "revision_id": 71238,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 3742,
+   "title": "Type-4O Sword",
+   "revision_id": 69749,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 15120,
+   "title": "Under the Moon Bauble",
+   "revision_id": 69676,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6511,
+   "title": "Underground Colosseum",
+   "revision_id": 69104,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 8824,
+   "title": "Valve: Both Eyes",
+   "revision_id": 69630,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8825,
+   "title": "Valve: Head",
+   "revision_id": 69631,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8822,
+   "title": "Valve: Left Eye",
+   "revision_id": 69627,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8823,
+   "title": "Valve: Right Eye",
+   "revision_id": 69629,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 7234,
+   "title": "Vanquish the Bad Bot",
+   "revision_id": 69126,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 4808,
+   "title": "Vengeful Child",
+   "revision_id": 72012,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Peculiar Machines"
+   ]
+  },
+  {
+   "page_id": 3550,
+   "title": "Virtuous Contract",
+   "revision_id": 70198,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 6817,
+   "title": "Virtuous Contract/SINoALICE",
+   "revision_id": 22637,
+   "reasons": [
+    "subpage:Virtuous Contract"
+   ]
+  },
+  {
+   "page_id": 6818,
+   "title": "Virtuous Contract/Valkyrie Anatomia: The Origin",
+   "revision_id": 22670,
+   "reasons": [
+    "subpage:Virtuous Contract"
+   ]
+  },
+  {
+   "page_id": 3689,
+   "title": "Virtuous Dignity",
+   "revision_id": 69774,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 3725,
+   "title": "Virtuous Grief",
+   "revision_id": 69782,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 3551,
+   "title": "Virtuous Treaty",
+   "revision_id": 70943,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 16872,
+   "title": "Viscous Oil",
+   "revision_id": 69924,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16771,
+   "title": "Visual Cure",
+   "revision_id": 69269,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 16780,
+   "title": "Volt-Proof Salve",
+   "revision_id": 69259,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8834,
+   "title": "W. Boar Meat",
+   "revision_id": 69496,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8827,
+   "title": "W. Moose Meat",
+   "revision_id": 69495,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 8883,
+   "title": "Warped Wire",
+   "revision_id": 69714,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5897,
+   "title": "Water Flea",
+   "revision_id": 69808,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5086,
+   "title": "Weapon Shop Flyer",
+   "revision_id": 66811,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 16860,
+   "title": "Weapons (Automata)",
+   "revision_id": 70047,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 3976,
+   "title": "Weird Machine",
+   "revision_id": 71021,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Village Machines"
+   ]
+  },
+  {
+   "page_id": 15116,
+   "title": "White Fox Mask",
+   "revision_id": 72757,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 4147,
+   "title": "White Hair",
+   "revision_id": 69971,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 12885,
+   "title": "World Purification Commission",
+   "revision_id": 72392,
+   "reasons": [
+    "category:Organizations"
+   ]
+  },
+  {
+   "page_id": 8805,
+   "title": "Writing Implement",
+   "revision_id": 70061,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 5347,
+   "title": "YoRHa",
+   "revision_id": 72889,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:Organizations"
+   ]
+  },
+  {
+   "page_id": 4734,
+   "title": "YoRHa (Flight Unit)",
+   "revision_id": 72891,
+   "reasons": [
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4738,
+   "title": "YoRHa (Heavy Armament)",
+   "revision_id": 60611,
+   "reasons": [
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4740,
+   "title": "YoRHa (Operator)",
+   "revision_id": 57136,
+   "reasons": [
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 4736,
+   "title": "YoRHa (Standard Armament)",
+   "revision_id": 57128,
+   "reasons": [
+    "category:NieR:Automata Units"
+   ]
+  },
+  {
+   "page_id": 7041,
+   "title": "YoRHa Betrayers",
+   "revision_id": 72749,
+   "reasons": [
+    "category:NieR:Automata Quests"
+   ]
+  },
+  {
+   "page_id": 5097,
+   "title": "YoRHa Body Storage Records",
+   "revision_id": 66797,
+   "reasons": [
+    "category:NieR:Automata Archives"
+   ]
+  },
+  {
+   "page_id": 3447,
+   "title": "YoRHa No.2 Type B",
+   "revision_id": 72996,
+   "reasons": [
+    "link:main_page",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 3493,
+   "title": "YoRHa No.9 Type S",
+   "revision_id": 72997,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "link:main_page",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 3494,
+   "title": "YoRHa Type A No.2",
+   "revision_id": 72998,
+   "reasons": [
+    "category:NieR:Automata Bosses",
+    "link:main_page",
+    "infobox:appearance"
+   ]
+  },
+  {
+   "page_id": 15105,
+   "title": "YoRHa Uniform 1",
+   "revision_id": 72743,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 15106,
+   "title": "YoRHa Uniform 2",
+   "revision_id": 69670,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 15108,
+   "title": "YoRHa Uniform Prototype",
+   "revision_id": 72747,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 3662,
+   "title": "YoRHa-issue Blade",
+   "revision_id": 69753,
+   "reasons": [
+    "category:NieR:Automata",
+    "category:NieR:Automata Weapons"
+   ]
+  },
+  {
+   "page_id": 5308,
+   "title": "YoRHa: Attacker 2",
+   "revision_id": 69451,
+   "reasons": [
+    "category:NieR:Automata Archives",
+    "category:Pearl Harbor Descent Records"
+   ]
+  },
+  {
+   "page_id": 5413,
+   "title": "YoRHa: Attacker 4",
+   "revision_id": 69452,
+   "reasons": [
+    "category:NieR:Automata Archives",
+    "category:Pearl Harbor Descent Records"
+   ]
+  },
+  {
+   "page_id": 5311,
+   "title": "YoRHa: Gunner 16",
+   "revision_id": 69453,
+   "reasons": [
+    "category:NieR:Automata Archives",
+    "category:Pearl Harbor Descent Records"
+   ]
+  },
+  {
+   "page_id": 5412,
+   "title": "YoRHa: Scanner 21",
+   "revision_id": 69454,
+   "reasons": [
+    "category:NieR:Automata Archives",
+    "category:Pearl Harbor Descent Records"
+   ]
+  },
+  {
+   "page_id": 4049,
+   "title": "Young Man's Outfit",
+   "revision_id": 70913,
+   "reasons": [
+    "category:NieR:Automata Items"
+   ]
+  },
+  {
+   "page_id": 6852,
+   "title": "Zombie Clown",
+   "revision_id": 61896,
+   "reasons": [
+    "category:NieR:Automata Units",
+    "category:Peculiar Machines"
+   ]
+  }
+ ]
+}

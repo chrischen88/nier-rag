@@ -1,0 +1,107 @@
+# YoRHa Archive config. See SPEC.md §12.1. The OpenAI key comes from OPENAI_API_KEY (.env), never from here.
+
+allowed_chat_models: [gpt-4o-mini]   # get_llm() refuses anything else (chat, classifier, eval overrides)
+
+llm:
+  model: gpt-4o-mini
+  max_output_tokens: 800
+  temperature: 0.2
+  max_retries: 5               # SDK retries 429/5xx with exponential backoff
+
+classifier_llm:                # spoiler tagger, ingest time only (SPEC §7.2)
+  model: gpt-4o-mini
+  temperature: 0.0
+  confidence_threshold: 0.7
+
+embeddings:
+  model: text-embedding-3-small   # changing this requires `scripts/ingest.py --reindex`
+  batch_size: 256
+
+paths:
+  chroma: data/chroma
+  chunks: data/chunks.jsonl
+  manifest: data/manifest.json
+  pages: data/pages.jsonl
+  parse_report: reports/parse_report.json
+  overrides: data/spoiler_overrides.yaml
+  spoiler_report: reports/spoiler_tags.csv
+
+chunking:
+  max_tokens: 400
+  overlap_tokens: 50
+  min_tokens: 50
+  display_names:               # context-header names; redirect aliases aren't used because some are spoilers (e.g. 2E)
+    "YoRHa No.2 Type B": 2B
+    "YoRHa No.9 Type S": 9S
+    "YoRHa Type A No.2": A2
+  infobox_text_fields:         # infobox key -> label, added to each page's lead chunk. Allow-list only:
+    type: Role                  # fields like `aka` or `status` can carry late-game spoilers (2B's "2E")
+    race: Race
+    sex: Sex
+    occupation: Occupation
+    affiliation: Affiliation
+    va_EN: English voice
+    va_JP: Japanese voice
+    name_JP: Japanese name
+    romaji: Romaji
+    first_appearance: First appearance
+
+retrieval:
+  candidates: 20               # top-k from Chroma before MMR
+  final_k: 6                   # passages sent to the LLM
+  mmr_lambda: 0.8            # 1 = pure relevance; lower values dropped main pages as redundant (tune in M6)
+  min_similarity: 0.35         # below this, refuse without calling the LLM. Lore questions scored
+                               # 0.51-0.72, off-topic 0.14-0.40 (2026-09-25 spot check; tune in M6)
+
+wiki:
+  base_url: https://nier.fandom.com
+  api_url: https://nier.fandom.com/api.php
+  user_agent: "YoRHaArchive/0.1 (personal RAG project; chrischen2191@gmail.com)"
+  max_requests_per_second: 1
+
+dump:
+  url: https://s3.amazonaws.com/wikia_xml_dumps/n/ni/nier_pages_current.xml.7z
+  raw_dir: data/raw           # fixed snapshot (revisions up to 2026-01-28); later wiki edits are ignored
+
+selection:                    # SPEC §5.2; the resulting data/manifest.json can be hand-edited
+  main_page: "NieR:Automata"
+  category_root_pattern: "^NieR: ?Automata"   # these categories and all their subcategories
+  infobox_game: "NieR:Automata"               # infobox first_appearance / other_appearanceN
+  exclude_categories:         # plus their subcategories: gameplay guides and non-game media (SPEC §2)
+    - "NieR:Automata Achievements"
+    - "NieR:Automata Plug-in Chips"
+    - "NieR:Automata Fishing Encyclopedia"
+    - "NieR:Automata Ver1.1a"
+    - "NieR:Automata Original Soundtrack"   # tracklists, no lore
+    - "NieR:Automata Arranged & Unreleased Tracks"
+    - "NieR:Automata Ver1.1a Episodes"
+    - "NieR:Automata Ver1.1a Characters"
+    - "NieR:Automata Novels"
+    - "NieR:Automata Picture Books"
+    - "YoRHa Stage Play"
+    - "YoRHa Boys"
+    - "YoRHa: Pearl Harbor Descent Record"
+  include_titles:             # core concept pages the rules above miss (no visible categories or infobox)
+    - "Machine"
+    - "Android"
+    - "Logic Virus"
+    - "Aliens"
+    - "Earth"
+    - "Moon"
+    - "Human"
+    - "8th Machine War"
+    - "Goliath Biped/Standard"
+    - "Goliath Biped/Enhanced"
+  exclude_titles:             # other games' hub pages linked from the main page
+    - "NieR"
+    - "NieR Reincarnation"
+    - "NieR Replicant ver.1.22474487139..."
+    - "NieR:Automata Ver1.1a"
+    - "NieR:Automata Original Soundtrack"   # tracklists, no lore
+    - "NieR:Automata Arranged & Unreleased Tracks"
+  skip_subpages: ["Gallery"]
+
+pricing:                      # USD per 1M tokens, for cost estimates only; check openai.com/api/pricing
+  chat_input: 0.15            # gpt-4o-mini
+  chat_output: 0.60
+  embedding: 0.02             # text-embedding-3-small
