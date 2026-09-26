@@ -10,7 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from src.chunking import Chunk, chunk_page, count_tokens, validate_chunks  # noqa: E402
 from src.config import ROOT, load_config, resolve_path  # noqa: E402
-from src.index import open_client, rebuild_collection, upsert_chunks  # noqa: E402
+from src.index import index_collections, open_client, rebuild_collection, update_metadata, upsert_chunks  # noqa: E402
 from src.ingest.dump import load_wiki  # noqa: E402
 from src.ingest.fetch import download_dump  # noqa: E402
 from src.ingest.parse import Renderer, parse_page, to_json  # noqa: E402
@@ -26,14 +26,20 @@ def main() -> None:
                    help="regenerate data/manifest.json (overwrites hand edits)")
     p.add_argument("--reindex", action="store_true",
                    help="skip parsing; re-tag and re-embed data/chunks.jsonl (e.g. after editing overrides)")
+    p.add_argument("--retag", action="store_true",
+                   help="skip parsing; re-tag data/chunks.jsonl and update spoiler tags in every existing index "
+                        "without re-embedding (after editing overrides)")
     p.add_argument("--skip-llm", action="store_true",
                    help="don't call the spoiler classifier; chunks no rule matches get level 5")
     p.add_argument("--no-embed", action="store_true", help="stop after writing data/chunks.jsonl")
+    p.add_argument("--embedding-model", help="override embeddings.model (each model gets its own collection)")
     args = p.parse_args()
     cfg = load_config(args.config) if args.config else load_config()
+    if args.embedding_model:
+        cfg["embeddings"]["model"] = args.embedding_model
 
     chunks_path = resolve_path(cfg, "chunks")
-    if args.reindex:
+    if args.reindex or args.retag:
         chunks = [Chunk(**json.loads(line)) for line in open(chunks_path)]
         print(f"chunks: loaded {len(chunks)} from {cfg['paths']['chunks']}")
     else:
@@ -44,6 +50,11 @@ def main() -> None:
         for c in chunks:
             out.write(json.dumps(c.to_json(), ensure_ascii=False) + "\n")
 
+    if args.retag:
+        for col in index_collections(open_client(resolve_path(cfg, "chroma"))):
+            update_metadata(col, chunks)
+            print(f"index: updated metadata of {col.count()} chunks in {col.name}")
+        return
     if args.no_embed:
         return
     embedder = get_embedder(cfg)

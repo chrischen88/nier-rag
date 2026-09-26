@@ -4,11 +4,13 @@ from __future__ import annotations
 
 import threading
 from collections.abc import Iterator
+from contextlib import contextmanager
 from dataclasses import dataclass, field
 
-from openai import OpenAI
+from openai import OpenAI, OpenAIError
 
 from src.config import require_openai_key
+from src.providers.base import ProviderError
 
 # Known output sizes; unknown models are probed once on first use.
 EMBEDDING_DIMS = {
@@ -27,6 +29,14 @@ class Usage:
     embedding_tokens: int = 0
     requests: int = 0
     _lock: threading.Lock = field(default_factory=threading.Lock, repr=False, compare=False)
+
+
+@contextmanager
+def _provider_errors() -> Iterator[None]:
+    try:
+        yield
+    except OpenAIError as e:  # raised once the SDK's own retries are used up
+        raise ProviderError(f"OpenAI request failed: {e}") from e
 
 
 def _client(max_retries: int) -> OpenAI:
@@ -52,7 +62,8 @@ class OpenAIEmbedder:
     def embed(self, texts: list[str]) -> list[list[float]]:
         vectors: list[list[float]] = []
         for i in range(0, len(texts), self.batch_size):
-            resp = self._client.embeddings.create(model=self.model, input=texts[i : i + self.batch_size])
+            with _provider_errors():
+                resp = self._client.embeddings.create(model=self.model, input=texts[i : i + self.batch_size])
             vectors.extend(d.embedding for d in sorted(resp.data, key=lambda d: d.index))
             self.usage.embedding_tokens += resp.usage.total_tokens
             self.usage.requests += 1
@@ -82,18 +93,20 @@ class OpenAILLM:
         if stream:
             return self._stream(kwargs)
 
-        resp = self._client.chat.completions.create(**kwargs)
+        with _provider_errors():
+            resp = self._client.chat.completions.create(**kwargs)
         self._record(resp.usage)
         return resp.choices[0].message.content or ""
 
     def _stream(self, kwargs: dict) -> Iterator[str]:
-        chunks = self._client.chat.completions.create(
-            **kwargs, stream=True, stream_options={"include_usage": True})
-        for chunk in chunks:
-            if chunk.usage:
-                self._record(chunk.usage)
-            if chunk.choices and chunk.choices[0].delta.content:
-                yield chunk.choices[0].delta.content
+        with _provider_errors():
+            chunks = self._client.chat.completions.create(
+                **kwargs, stream=True, stream_options={"include_usage": True})
+            for chunk in chunks:
+                if chunk.usage:
+                    self._record(chunk.usage)
+                if chunk.choices and chunk.choices[0].delta.content:
+                    yield chunk.choices[0].delta.content
 
     def _record(self, usage) -> None:
         with self.usage._lock:  # the spoiler tagger calls generate() from several threads

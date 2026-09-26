@@ -55,9 +55,10 @@ chunking:
 retrieval:
   candidates: 20               # top-k from Chroma before MMR
   final_k: 6                   # passages sent to the LLM
-  mmr_lambda: 0.8            # 1 = pure relevance; lower values dropped main pages as redundant (tune in M6)
-  min_similarity: 0.35         # below this, refuse without calling the LLM. Lore questions scored
-                               # 0.51-0.72, off-topic 0.14-0.40 (2026-09-25 spot check; tune in M6)
+  mmr_lambda: 0.8            # 1 = pure relevance; lower values dropped main pages as redundant. M6 eval:
+                               # Recall@6 flat (0.97) for 0.6-1.0
+  min_similarity: 0.35         # below this, refuse without calling the LLM. M6 eval (2026-09-26): off-topic
+                               # 0.16-0.27, lowest answerable 0.40; higher off-topic scores are refused by the prompt
 
 wiki:
   base_url: https://nier.fandom.com

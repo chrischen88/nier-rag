@@ -41,3 +41,20 @@ def test_classifier_section_overrides_and_inherits(openai_key):
     assert clf.name == "openai/some-other-model"
     assert clf.default_temperature == 0.0
     assert clf.max_output_tokens == cfg["llm"]["max_output_tokens"]  # inherited
+
+
+@pytest.mark.parametrize("stream", [False, True])
+def test_openai_errors_become_provider_errors(openai_key, stream):
+    import httpx
+    from openai import APIConnectionError
+
+    from src.providers import ProviderError
+
+    def fail(**kw):
+        raise APIConnectionError(request=httpx.Request("POST", "https://api.openai.com"))
+
+    llm = get_llm(load_config())
+    llm._client.chat.completions.create = fail
+    with pytest.raises(ProviderError, match="OpenAI request failed"):
+        out = llm.generate([{"role": "user", "content": "hi"}], stream=stream)
+        list(out) if stream else out

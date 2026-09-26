@@ -18,6 +18,8 @@ TWISTS = [
     (r"YoRHa (were|was) (designed|planned|meant) to be (destroyed|disposed)|planned disposal|YoRHa Disposal", 3),
     (r"\bEnding E\b", 4),
     (r"\bRed Girls?\b", 2),  # the Red Girls first appear at the end of Route B
+    (r"\bChapter 1[1-7]\b", 3),  # Routes A/B end at Chapter 10; later chapters are Route C/D
+    (r"Resource Recovery Units?|Access (Release )?Keys?\b|Tower sub-?(unit|node)s?", 3),  # Route C Tower entry
 ]
 
 

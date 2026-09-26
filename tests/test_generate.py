@@ -1,6 +1,6 @@
 import pytest
 
-from src.generate import LATER, Assistant, build_messages, resolve_citations
+from src.generate import GAMEPLAY, LATER, Assistant, build_messages, resolve_citations
 from src.retrieve import Retrieved
 from src.spoilers import question_level
 
@@ -79,3 +79,18 @@ def test_streamed_answer_matches_citations(assistant):
 ])
 def test_question_level(q, level):
     assert question_level(q) == level
+
+
+@pytest.mark.parametrize("q", ["Where can I farm Titanium Alloy?", "What's the best plug-in chip setup?",
+                               "How do I beat Engels?", "How do I get all the trophies?"])
+def test_gameplay_questions_refuse_without_retrieval_or_llm(assistant, q):
+    a = assistant([passage(1)])
+    ans = a.ask(q, 5)
+    assert ans.text == GAMEPLAY and ans.refused_before_llm and a.llm.calls == 0 and ans.passages == []
+
+
+@pytest.mark.parametrize("q", ["Who is 9S's best friend?", "What weapons does 2B use?", "Where is Pascal's village?",
+                               "Who built the Tower?"])
+def test_lore_questions_are_not_gameplay(assistant, q):
+    a = assistant([passage(1)])
+    assert not a.ask(q, 5).refused_before_llm

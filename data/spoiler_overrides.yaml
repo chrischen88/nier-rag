@@ -7,3 +7,44 @@
 "YoRHa > YoRHa Androids > Designations > Model Types": 3
 "Pod 153 > Personality": 4                                   # describes Ending E
 "Earth > Characters > NieR:Automata": 3                      # character list includes the Red Girl
+
+# From the 2026-09-26 eval (scripts/eval.py). A page's lead section path equals its title, and a title key
+# would override the whole page, so leads are keyed by chunk_id.
+"3586:0:0": 3                     # Pod 042 lead: "supports ... A2 during routes C and D"
+"3655:0:0": 1                     # Simone lead: Route A boss; was 5 for mentioning Ver1.1a
+"13967:0:0": 1                    # Council of Humanity lead: no twist, just what it commands
+"3592:0:0": 1                     # Anemone lead: Route A camp leader; stage-play history only
+"3652:0:0": 1                     # Resistance Camp lead: hub description and character list
+"7011:0:0": 1                     # Copied City lead: Route A fight against Adam
+# Location/availability notes that mention Route C chapters (11-17); now also flagged by the audit.
+"Bunker > Location": 3                                       # "Starting from Chapter 12, the Bunker is no longer accessible"
+"5440:0:0": 3                                                # City Ruins lead: the Tower emerges in Chapter 11
+"Flooded City > Points of Interest > Soul Box": 3            # Tower entry in Chapter 15
+"Fuel Filter > Location": 3                                  # A2's battle with Hegel
+"Machine Arm > Location": 3                                  # Pascal "with his memories wiped"
+"Machine Head > Location": 3
+"Machine Leg > Location": 3
+"Machine Torso > Location": 3
+"16763:0:0": 3                                               # Pascal's Book lead: "left alive by A2 with his memories intact"
+"Small Biped (EMP) > Location": 3                            # Chapter 13
+"4732:0:0": 3                                                # Small Stubby (EMP) lead: Chapter 11-03
+# The Tower emerges in Chapter 11, and the three Resource Recovery Units open in Route C. Pages with
+# nothing above level 3 are keyed by title; Tower and Tower System Outline have level 5 sections, so
+# only their low sections are listed.
+"Flooded City/Soul Box": 3
+"Amusement Park/God Box": 3                                  # 21O boss fight
+"Forest Zone/Meat Box": 3
+"Park Access Key": 3
+"Tower > Location": 3
+"Tower > Points of Interest > Nodes": 3
+"Tower > Points of Interest > Staircase": 3                  # corrupted YoRHa units
+"Tower > Points of Interest > Ambush": 3                     # an army of 2B copies
+"Tower > Points of Interest > Flight Unit": 3
+"Tower > Points of Interest > Battle for the Sky": 3
+"6459:0:0": 3                                                # Tower System Outline lead
+"City Ruins > Points of Interest > Tower": 3
+"Amusement Park/Theater > Location": 3                       # 9S heads to the God Box
+"Amusement Park/Under the Theater > Location": 3
+"Items (Automata) > Key Items": 3                            # Tower sub-unit access keys
+"5051:0:0": 3                                                # Amusement Park lead: 9S goes after the Park Access Key
+"Coelacanth": 3                                              # fished near the Flooded City resource recovery unit

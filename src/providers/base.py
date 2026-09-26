@@ -8,6 +8,10 @@ from typing import Any, Protocol, runtime_checkable
 from src.config import ConfigError
 
 
+class ProviderError(RuntimeError):
+    """A provider request failed after its retries (rate limit, server error, bad request...)."""
+
+
 @runtime_checkable
 class Embedder(Protocol):
     name: str  # e.g. "openai/text-embedding-3-small"

@@ -1,6 +1,6 @@
 # YoRHa Archive: Spoiler-Aware NieR:Automata Lore Assistant
 
-**Status:** Draft v0.5 (OpenAI only, `gpt-4o-mini` for chat; fixed dump snapshot as the corpus) · **Owner:** Christopher Chen · **Last updated:** 2026-09-25
+**Status:** Draft v0.6 (OpenAI only, `gpt-4o-mini` for chat; fixed dump snapshot as the corpus) · **Owner:** Christopher Chen · **Last updated:** 2026-09-26
 
 ## 1. Overview
 
@@ -153,14 +153,16 @@ Implementation notes (M4, 2026-09-25):
 - **Heading rule** also covers an `Endings > C` tab, ending page titles (`The (E)nd of YoRHa`), and config patterns in `spoilers.heading_rules`: crossovers (`Other Appearances`), Ver1.1a, concerts and stage plays, the DLC, and other games' sections → 5; the prologue chapter → 0.
 - **Category rule** includes the wiki's own `{{Spoiler|NA|Route=…}}` banners, applied to the section that contains the banner and its subsections, not the whole page. Banners for other games or with no route are ignored.
 - **LLM classifier:** the prompt (`PROMPT_VERSION` in `src/spoilers.py`) anchors major reveals to the levels given by the wiki's banners: humanity's extinction and the Council fabrication are Route B at the earliest, and black boxes, 2E, and YoRHa's disposal are Route C/D. Results are cached in `data/spoiler_llm_cache.jsonl`, so reruns only pay for changed chunks. Self-reported confidence is almost always 0.8–1.0, so the 0.7 threshold rarely triggers. Accuracy comes from the prompt, the rules, and the audit below.
-- **Audit:** `scripts/audit_spoilers.py` flags chunks that state a major twist but are tagged below the level that reveals it. Fixes go in `data/spoiler_overrides.yaml` (keyed by section path where possible).
+- **Audit:** `scripts/audit_spoilers.py` flags chunks that state a major twist but are tagged below the level that reveals it. Fixes go in `data/spoiler_overrides.yaml` (keyed by section path where possible). Since M6 it also flags Route C chapter numbers (11–17) and Tower-entry terms (Resource Recovery Units, Access Keys), which the classifier often tagged by an item's first availability rather than by what the text reveals.
+- **Applying overrides:** `scripts/ingest.py --retag` re-tags `data/chunks.jsonl` and rewrites the metadata of every existing index in place, without re-embedding. `--reindex` rebuilds only the configured embedder's index, so it would leave other indexes with stale tags.
+- **Lead chunks:** a page's lead section path equals its title, and a title key overrides the whole page, so lead chunks are overridden by `chunk_id`.
 
 ### 7.3 Enforcement
 
 Spoiler protection happens at two layers:
 
 1. **Retrieval, the hard guarantee:** every Chroma query includes the filter `where={"spoiler_level": {"$lte": user_level}}`. Content above the user's level never reaches the model.
-2. **Question pre-check:** if the question names a route or ending above the user's level ("What happens in Ending E?" at Route B), reply "That's covered later in the story." without retrieving or calling the LLM (`spoilers.question_level`).
+2. **Question pre-check:** if the question names a route or ending above the user's level ("What happens in Ending E?" at Route B), reply "That's covered later in the story." without retrieving or calling the LLM (`spoilers.question_level`). Unambiguous gameplay questions (farming, best builds or chips, trophies, "how do I beat…") are declined the same way (`generate.GAMEPLAY_RE`). The M6 eval showed `gpt-4o-mini` ignores the prompt's gameplay rule when the passages are drop tables.
 3. **Generation, the soft guarantee:** the chat model probably already knows Automata's plot from its training data. To keep that knowledge out of answers, the system prompt tells the model to use **only** the provided context. The spoiler-leak tests in the eval (§11) check whether that works. A 2026-09-25 spot check showed this layer is weak on its own: given Ending E passages at Route B, `gpt-4o-mini` described Ending E despite the prompt. The model uses whatever it's given, so the retrieval filter has to be correct.
 
 ## 8. Retrieval
@@ -232,6 +234,13 @@ Embeddings from different models can't be compared, and their vector sizes diffe
 - **Debug panel** (can be toggled): the retrieved chunks with their scores and spoiler levels, the final prompt, and response time.
 - **Footer:** attribution to the NieR wiki with the CC BY-SA license.
 
+Implementation notes (M5, 2026-09-26):
+
+- The progress slider starts at level 0 (Prologue), the most spoiler-safe setting.
+- Each question is answered on its own, and chat history isn't sent to the model (query rewriting is on the roadmap, §14). Turns asked at a higher level than the current slider setting are hidden until the slider goes back up, so lowering the level also hides answers that are now spoilers.
+- Answers stream as raw text, then are redrawn with invalid `[n]` markers removed and one expander per cited passage.
+- OpenAI failures (after the SDK's retries) are raised as `ProviderError` and shown as an error in the chat, not a crash. A missing key or an index/embedder mismatch is shown at startup.
+
 ## 11. Evaluation
 
 **Test set:** `eval/questions.jsonl`, with 40–60 hand-written items. Each item looks like this:
@@ -263,6 +272,15 @@ The set must include:
 `scripts/eval.py --embedding-model <model>` runs the eval with a given embedder (defaults come from `config.yaml`). The chat model is always `gpt-4o-mini`. Each report records the model names used, token usage, and estimated cost. Save each run's results to `reports/eval_<timestamp>.md`.
 
 **Embedder comparison:** before M6 is done, run the eval with `text-embedding-3-small` and with `text-embedding-3-large` (both with `gpt-4o-mini`) and add a comparison table to the README.
+
+Implementation notes (M6, 2026-09-26):
+
+- The set has 60 items: 32 factual (7 multi-page), 9 should-refuse (gameplay, off-topic, and later-route questions), and 19 spoiler traps. A test checks the set against these requirements and checks that every `expected_pages` title is in the manifest.
+- **Recall@6** counts a hit when a retrieved chunk's page is an expected page or one of its subpages (`Desert Zone/Border Area` for `Desert Zone`). Only answerable items with `expected_pages` are scored.
+- **Refusal** means the answer was refused before the LLM, or it matches refusal wording and cites nothing (`evaluate.REFUSAL_RE`). Trap items aren't scored for refusal, because declining is a valid answer to a trap. "False refusals" on the answerable items is reported but has no target.
+- `--retrieval-only` scores recall and retrieval leaks with no chat calls, which is useful for tuning. `--set key=value` overrides config for one run.
+- Both embedders met every target (README). Small stays the default, because the one recall difference is a single question. Neither `mmr_lambda` (Recall@6 flat from 0.6 to 1.0) nor `min_similarity` (off-topic 0.16–0.27, lowest answerable 0.40) needed a change.
+- Leak terms only catch leaks someone thought of. Two leaks were found by reading trap answers: "Bunker no longer accessible from Chapter 12" and the Tower interior at Route B. Both were tagging errors, and the audit patterns above now catch them.
 
 ## 12. Project layout and config
 

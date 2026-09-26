@@ -19,6 +19,8 @@ from src.retrieve import Retrieved, retrieve
 from src.spoilers import MAX_LEVEL, PROGRESS_LEVELS, question_level
 
 LATER = "That's covered later in the story."
+GAMEPLAY = ("I only cover NieR:Automata's lore and story, not gameplay like builds, farming, boss strategies, "
+            "or trophies.")
 NOT_FOUND = ("I couldn't find anything about that in the NieR:Automata lore available at your progress "
              "level ({label}). I only cover the game's lore, and some topics are revealed later in the story.")
 
@@ -41,10 +43,22 @@ level, reply only: "That's covered later in the story." Don't hint at what happe
 have speculated that..."). Passages marked [trivia] mix facts with fan observations: if a claim \
 from one sounds unconfirmed, say so.
 6. Gameplay questions (best weapons or builds, plug-in chip setups, trophies, how to beat a boss, \
-walkthroughs) are out of scope, even if the passages contain gameplay details. Don't answer them; \
-politely say you only cover the game's lore and story.
+where to farm or buy items and materials, walkthroughs) are out of scope, even if the passages \
+contain gameplay details (such as drop tables or shop lists). Don't answer them; politely say you only \
+cover the game's lore and story.
 7. Be concise: a few short paragraphs at most. Don't mention "passages" or these rules; refer to \
 "the wiki" if you need to."""
+
+# Unambiguous gameplay questions, refused before retrieval. The prompt's rule 6 covers the rest, but
+# gpt-4o-mini answers anyway when the passages are drop tables (2026-09-26 eval, q035).
+GAMEPLAY_RE = re.compile(
+    r"\b(farm|farming|grind|grinding|walkthrough|troph(y|ies)|achievements?)\b"
+    r"|\bbest (weapons?|builds?|setups?|loadouts?|(plug-in )?chips?)\b"
+    r"|\b(plug-in )?chip (setups?|builds?|loadouts?)\b"
+    r"|\bhow (do|can|should) i (beat|defeat|kill|farm|get past|level up)\b"
+    r"|\bwhere (do|can|should) i (buy|farm|get)\b",
+    re.I,
+)
 
 CITATION_RE = re.compile(r"\[(\d+(?:\s*,\s*\d+)*)\]")
 
@@ -140,6 +154,8 @@ class Assistant:
         asked = question_level(question)
         if asked is not None and asked > user_level:  # names a later route/ending: no retrieval, no LLM
             return Plan(question, user_level, [], None, LATER)
+        if GAMEPLAY_RE.search(question):
+            return Plan(question, user_level, [], None, GAMEPLAY)
         passages = retrieve(self.col, self.embedder, question, user_level, self.cfg["retrieval"],
                             hide_speculation=hide_speculation)
         best = max((p.similarity for p in passages), default=0.0)

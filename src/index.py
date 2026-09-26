@@ -62,6 +62,22 @@ def rebuild_collection(client: ClientAPI, embedder: Embedder) -> Collection:
     return get_collection(client, embedder, create=True)
 
 
+def index_collections(client: ClientAPI) -> list[Collection]:
+    """Every per-embedder chunk collection in this Chroma store."""
+    return [client.get_collection(c.name, embedding_function=None)
+            for c in client.list_collections() if c.name.startswith("chunks__")]
+
+
+def update_metadata(col: Collection, chunks: list[Chunk], batch: int = 256) -> None:
+    """Rewrite chunk metadata (e.g. spoiler tags) in place, keeping the embeddings. The collection must
+    hold exactly these chunks; otherwise re-embed with `scripts/ingest.py --reindex`."""
+    if set(col.get(include=[])["ids"]) != {c.chunk_id for c in chunks}:
+        raise IndexMismatchError(f"{col.name} doesn't match data/chunks.jsonl; run `scripts/ingest.py --reindex`.")
+    for i in range(0, len(chunks), batch):
+        part = chunks[i : i + batch]
+        col.update(ids=[c.chunk_id for c in part], metadatas=[c.chroma_metadata() for c in part])
+
+
 def upsert_chunks(col: Collection, embedder: Embedder, chunks: list[Chunk], batch: int = 256) -> None:
     for i in range(0, len(chunks), batch):
         part = chunks[i : i + batch]
