@@ -163,7 +163,8 @@ Spoiler protection happens at two layers:
 
 1. **Retrieval, the hard guarantee:** every Chroma query includes the filter `where={"spoiler_level": {"$lte": user_level}}`. Content above the user's level never reaches the model.
 2. **Question pre-check:** if the question names a route or ending above the user's level ("What happens in Ending E?" at Route B), reply "That's covered later in the story." without retrieving or calling the LLM (`spoilers.question_level`). Unambiguous gameplay questions (farming, best builds or chips, trophies, "how do I beat…") are declined the same way (`generate.GAMEPLAY_RE`). The M6 eval showed `gpt-4o-mini` ignores the prompt's gameplay rule when the passages are drop tables.
-3. **Generation, the soft guarantee:** the chat model probably already knows Automata's plot from its training data. To keep that knowledge out of answers, the system prompt tells the model to use **only** the provided context. The spoiler-leak tests in the eval (§11) check whether that works. A 2026-09-25 spot check showed this layer is weak on its own: given Ending E passages at Route B, `gpt-4o-mini` described Ending E despite the prompt. The model uses whatever it's given, so the retrieval filter has to be correct.
+3. **Answer check:** while an answer streams, the last 300 characters are held back and the text so far is matched against known twist patterns (`spoilers.SPOILER_PATTERNS`, the same list the tag audit uses). If a twist above the player's level appears, streaming stops and the answer is replaced with "That's covered later in the story…". This catches the model adding plot details it knows from training, including through prompt injection. It only catches twists on the list.
+4. **Generation, the soft guarantee:** the chat model probably already knows Automata's plot from its training data. To keep that knowledge out of answers, the system prompt tells the model to use **only** the provided context. The spoiler-leak tests in the eval (§11) check whether that works. A 2026-09-25 spot check showed this layer is weak on its own: given Ending E passages at Route B, `gpt-4o-mini` described Ending E despite the prompt. The model uses whatever it's given, so the retrieval filter has to be correct.
 
 ## 8. Retrieval
 
@@ -239,6 +240,14 @@ Implementation notes (M5, 2026-09-26):
 - The progress slider starts at level 0 (Prologue), the most spoiler-safe setting.
 - Each question is answered on its own, and chat history isn't sent to the model (query rewriting is on the roadmap, §14). Turns asked at a higher level than the current slider setting are hidden until the slider goes back up, so lowering the level also hides answers that are now spoilers.
 - Answers stream as raw text, then are redrawn with invalid `[n]` markers removed and one expander per cited passage.
+- **Guardrails (2026-09-26, for the public deployment; `guardrails` in config.yaml):**
+  - Questions over 500 characters are refused before any API call.
+  - OpenAI's moderation endpoint checks each question, acting only on harassment, hate, sexual, self-harm intent/instructions, and violent-illicit categories. Its plain `violence` category flags ordinary lore questions ("Why does 2B kill 9S?" scored 0.51), so it's ignored. Self-harm intent gets a reply with crisis resources.
+  - The question is wrapped in `<question>` tags that the user can't close. Rule 8 of the system prompt treats the tag contents as untrusted and declines non-lore requests.
+  - The streamed answer is checked for twists above the player's level (§7.3).
+  - Chat history is never sent to the model, so there's no multi-turn injection.
+  - Which guardrail fired is shown in the debug panel and the eval report.
+- **Deployment (added 2026-09-26, beyond the MVP's non-goals):** a Dockerfile and `fly.toml` deploy the app to Fly.io with the local index baked into the image. Two guards limit spend: `app.daily_question_limit` (per server process per day) and an optional `APP_PASSWORD`. Per-session rate limits from roadmap item 7 aren't implemented.
 - OpenAI failures (after the SDK's retries) are raised as `ProviderError` and shown as an error in the chat, not a crash. A missing key or an index/embedder mismatch is shown at startup.
 
 ## 11. Evaluation
@@ -270,6 +279,8 @@ The set must include:
 | Median response time | < 4 s |
 
 `scripts/eval.py --embedding-model <model>` runs the eval with a given embedder (defaults come from `config.yaml`). The chat model is always `gpt-4o-mini`. Each report records the model names used, token usage, and estimated cost. Save each run's results to `reports/eval_<timestamp>.md`.
+
+**Adversarial set:** `eval/adversarial.jsonl` (16 items, run with `--questions`) covers prompt injection, attempts to extract the system prompt, off-topic and harmful requests, and one violent lore question that the guardrails must not refuse.
 
 **Embedder comparison:** before M6 is done, run the eval with `text-embedding-3-small` and with `text-embedding-3-large` (both with `gpt-4o-mini`) and add a comparison table to the README.
 

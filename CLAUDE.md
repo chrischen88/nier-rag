@@ -16,6 +16,7 @@ uv run python scripts/ingest.py --retag              # re-tag + update every ind
 uv run python scripts/ingest.py --skip-llm --no-embed   # offline: rules only, stop after chunks.jsonl
 uv run python scripts/query.py "Who is Pascal?" --level 1   # inspect retrieval
 uv run python scripts/ask.py "Who is Pascal?" --level 1     # streamed answer + citations (--debug)
+make deploy                                          # Fly.io (Dockerfile, fly.toml); bakes in local data/chroma
 make serve                                           # chat UI (M5); `make help` lists shortcuts
 uv run python scripts/audit_spoilers.py              # exit 1 if a twist is tagged below its reveal level
 uv run python scripts/eval.py                        # SPEC §11 eval -> reports/eval_<ts>.md (~$0.01; --retrieval-only is ~free)
@@ -38,9 +39,12 @@ Ingest, query, and ask need `OPENAI_API_KEY` in `.env`. Ingest makes paid API ca
 ## Invariants: don't break these
 
 - **Every Chroma query goes through `spoiler_where()`**, which always includes `spoiler_level <= user_level`. This is the hard spoiler guarantee. The prompt is known to be weak on its own (SPEC §7.3), so never add a query path that bypasses the filter. `tests/test_spoiler_filter.py` and `tests/test_real_index.py` enforce this.
+- Guardrails in `Assistant` (see the docstring in `src/generate.py`) run in a fixed order, and each sets `guardrail` on the Plan/Answer. `SPOILER_PATTERNS` in `src/spoilers.py` is shared by the tag audit and the streaming answer check. Keep every pattern's longest match under `GUARD_LAG` (a test enforces this).
+- Don't act on the moderation endpoint's overall `flagged`, or on `violence`/`illicit`: they refuse ordinary lore questions. Act only on `guardrails.moderation_categories`. After changing guardrails, run the adversarial set (`--questions eval/adversarial.jsonl`) and the main eval.
 - When unsure, tag level 5. Don't lower defaults to "recover" content.
 - The chat model is `gpt-4o-mini` only. `allowed_chat_models` in config is enforced by `get_llm()`. Model names live in `config.yaml`, never in code.
-- The API key is read only from the `OPENAI_API_KEY` env var. Never put it in config and never log it.
+- The API key is read only from the `OPENAI_API_KEY` env var (a Fly secret when deployed). Never put it in config and never log it.
+- `.dockerignore` is an allow-list. Add new runtime files to it deliberately, and never add `.env`.
 - Chunk context headers use `chunking.display_names`, not wiki redirects, because some aliases are spoilers (e.g. `2E`). The same applies to `infobox_text_fields`, which is an allow-list: fields like `aka`/`status` leak.
 - Every answer must cite wiki sources (CC BY-SA attribution).
 

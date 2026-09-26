@@ -1,4 +1,4 @@
-.PHONY: help install serve test ingest reindex retag audit eval
+.PHONY: help install serve test ingest reindex retag audit eval deploy
 
 PORT ?= 8501
 
@@ -28,3 +28,6 @@ audit:  ## flag chunks that state a twist below its reveal level
 
 eval:  ## full eval -> reports/eval_<timestamp>.md (calls OpenAI, ~$0.01)
 	uv run python scripts/eval.py
+
+deploy:  ## deploy to Fly.io with the local index (one machine, so the daily question cap holds)
+	fly deploy --ha=false

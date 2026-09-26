@@ -34,6 +34,13 @@ class LLM(Protocol):
     ) -> str | Iterator[str]: ...
 
 
+@runtime_checkable
+class Moderator(Protocol):
+    name: str  # e.g. "openai/omni-moderation-latest"
+
+    def flagged(self, text: str) -> list[str]: ...  # the configured categories `text` was flagged for
+
+
 def get_embedder(cfg: dict[str, Any]) -> Embedder:
     from src.providers.openai import OpenAIEmbedder
 
@@ -59,3 +66,14 @@ def get_llm(cfg: dict[str, Any], section: str = "llm") -> LLM:
         default_temperature=settings.get("temperature"),
         max_retries=settings.get("max_retries", 5),
     )
+
+
+def get_moderator(cfg: dict[str, Any]) -> Moderator | None:
+    """Input moderation for questions, or None when `guardrails.moderation` is off."""
+    guard = cfg.get("guardrails", {})
+    if not guard.get("moderation"):
+        return None
+    from src.providers.openai import OpenAIModerator
+
+    return OpenAIModerator(model=guard["moderation_model"], categories=guard["moderation_categories"],
+                           max_retries=cfg["llm"].get("max_retries", 5))

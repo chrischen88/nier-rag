@@ -38,6 +38,27 @@ MIN_LEVEL, MAX_LEVEL = 0, 5
 DEFAULT_LEVEL = MAX_LEVEL  # when unsure, hide it
 
 LETTER_LEVELS = {"A": 1, "B": 2, "C": 3, "D": 3, "E": 4}
+
+# Major twists: (pattern, level at which it stops being a spoiler). scripts/audit_spoilers.py checks chunk text
+# against these; the answer guard in src/generate.py checks model output. Expect some false positives.
+# No match may be longer than generate.GUARD_LAG characters.
+SPOILER_PATTERNS: list[tuple[re.Pattern, int]] = [(re.compile(p, re.I), lvl) for p, lvl in [
+    (r"human(s|ity)?\b[^.]{0,80}\bextinct|extinct[^.]{0,60}\bhuman", 2),
+    (r"Council of Humanity[^.]{0,80}\b(fabricat\w*|fake|(doesn't|does not|never) exist\w*)"
+     r"|\b(fabricat\w*|fake)[^.]{0,60}\bCouncil of Humanity", 2),
+    (r"\b2E\b|\bType E\b", 3),
+    (r"black box[^.]{0,120}(machine core|core of a machine|same (core|material))", 3),
+    (r"YoRHa (were|was) (designed|planned|meant) to be (destroyed|disposed)|planned disposal|YoRHa Disposal", 3),
+    (r"\bEnding E\b", 4),
+    (r"\bRed Girls?\b", 2),  # the Red Girls first appear at the end of Route B
+    (r"\bChapter 1[1-7]\b", 3),  # Routes A/B end at Chapter 10; later chapters are Route C/D
+    (r"Resource Recovery Units?|Access (Release )?Keys?\b|Tower sub-?(unit|node)s?", 3),  # Route C Tower entry
+]]
+
+
+def spoiler_hits(text: str, user_level: int) -> list[str]:
+    """Twist patterns in `text` that are still spoilers at `user_level`."""
+    return [p.pattern for p, lvl in SPOILER_PATTERNS if lvl > user_level and p.search(text)]
 AUTOMATA_GAMES = {"na", "nier:automata", "nier: automata", "automata"}
 
 # Route/ending names a question can mention, and the level that unlocks them (SPEC §7.1).

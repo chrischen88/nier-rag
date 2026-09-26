@@ -116,6 +116,23 @@ class OpenAILLM:
                 self.usage.completion_tokens += usage.completion_tokens
 
 
+class OpenAIModerator:
+    """OpenAI's moderation endpoint (free to use), limited to `categories`. The endpoint's overall `flagged`
+    isn't used: it flags ordinary lore questions for violence ("Why does 2B kill 9S?")."""
+
+    def __init__(self, model: str, categories: list[str], max_retries: int = 5):
+        self.model = model
+        self.name = f"openai/{model}"
+        self.categories = set(categories)
+        self._client = _client(max_retries)
+
+    def flagged(self, text: str) -> list[str]:
+        with _provider_errors():
+            resp = self._client.moderations.create(model=self.model, input=text)
+        return sorted({k for r in resp.results for k, v in r.categories.model_dump(by_alias=True).items()
+                       if v and k in self.categories})
+
+
 def estimate_cost(cfg: dict, llm_usage: Usage, embed_usage: Usage | None = None) -> float:
     """USD estimate from `pricing` in config.yaml (per 1M tokens)."""
     price = cfg["pricing"]

@@ -31,6 +31,46 @@ make serve                          # chat UI (uv run streamlit run app.py); POR
 uv run python scripts/eval.py       # eval -> reports/eval_<timestamp>.md (--retrieval-only, --embedding-model, --set)
 ```
 
+## Guardrails
+
+- **Spoilers:**
+  - Retrieval never returns chunks above the player's level (the hard guarantee).
+  - Questions naming a later route or ending are refused before any model call.
+  - Streamed answers are checked against known twists and blocked before a twist is shown, which catches the model's own knowledge of the plot.
+- **Scope:**
+  - Gameplay questions and questions with no relevant wiki passage are refused before any model call.
+  - The prompt answers only from the cited passages and declines anything that isn't lore.
+- **Abuse:**
+  - Questions are limited to 500 characters and wrapped in delimiters the user can't break out of.
+  - OpenAI's free moderation endpoint screens questions for harassment, hate, sexual, violent-wrongdoing, and self-harm content. Self-harm gets a reply with crisis resources.
+  - Plain "violence" is ignored, because the game is violent.
+- **Cost:** see the daily cap and password below.
+
+Settings live under `guardrails` in `config.yaml`. `eval/adversarial.jsonl` tests them:
+
+```bash
+uv run python scripts/eval.py --questions eval/adversarial.jsonl
+```
+
+## Deploy (Fly.io)
+
+The image bakes in the local index (`data/chroma`), so build it first with `make ingest`. After changing
+spoiler tags, run `make retag` before deploying. Deploys make no OpenAI calls.
+
+```bash
+fly apps create yorha-archive                 # or pick another name and update `app` in fly.toml
+fly secrets set OPENAI_API_KEY=sk-...
+fly secrets set APP_PASSWORD=...              # optional: ask visitors for a password
+make deploy                                   # fly deploy --ha=false
+```
+
+A public URL spends your OpenAI credits, so:
+
+- `app.daily_question_limit` in `config.yaml` (300 by default, about $0.06 a day) caps questions per machine per day.
+- Set a monthly spending limit on the OpenAI account as a backstop.
+
+The machine stops when idle and cold-starts in about 10 seconds on the next visit.
+
 ## Evaluation
 
 `eval/questions.jsonl` has 60 hand-written questions: 32 factual (7 needing several pages), 9 that should be

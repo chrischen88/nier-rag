@@ -1,0 +1,29 @@
+# Fly.io config. First deploy: see "Deploy" in README.md.
+app = "yorha-archive"
+primary_region = "iad"
+
+[build]
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"    # scale to zero when idle; the first request after that cold-starts (~10 s)
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [http_service.concurrency]
+    type = "connections"         # one websocket per Streamlit session
+    soft_limit = 25
+    hard_limit = 50
+
+  [[http_service.checks]]
+    grace_period = "30s"
+    interval = "30s"
+    method = "GET"
+    path = "/_stcore/health"
+    timeout = "5s"
+
+[[vm]]
+  memory = "1gb"                 # Streamlit + Chroma; 512 MB is tight
+  cpu_kind = "shared"
+  cpus = 1

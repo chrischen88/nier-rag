@@ -21,7 +21,7 @@ from src.config import ROOT, ConfigError, load_config, resolve_path  # noqa: E40
 from src.evaluate import Result, load_questions, render_report, result_dict, score  # noqa: E402
 from src.generate import Assistant  # noqa: E402
 from src.index import IndexMismatchError, get_collection, open_client  # noqa: E402
-from src.providers import ProviderError, get_embedder, get_llm  # noqa: E402
+from src.providers import ProviderError, get_embedder, get_llm, get_moderator  # noqa: E402
 from src.providers.openai import estimate_cost  # noqa: E402
 from src.retrieve import retrieve  # noqa: E402
 
@@ -47,6 +47,7 @@ def run_one(q, assistant: Assistant, cfg: dict, retrieval_only: bool) -> Result:
             passages = ans.passages
             r.answer, r.refused_before_llm, r.seconds = ans.text, ans.refused_before_llm, ans.seconds
             r.citations, r.invalid_citations = len(ans.citations), ans.invalid_citations
+            r.guardrail = ans.guardrail
     except ProviderError as e:
         r.error = str(e)
         return r
@@ -82,7 +83,7 @@ def main() -> None:
         col = get_collection(open_client(resolve_path(cfg, "chroma")), embedder)
     except (ConfigError, IndexMismatchError) as e:
         raise SystemExit(str(e))
-    assistant = Assistant(cfg, col, embedder, llm)
+    assistant = Assistant(cfg, col, embedder, llm, get_moderator(cfg))
 
     results = []
     for i, q in enumerate(questions, 1):

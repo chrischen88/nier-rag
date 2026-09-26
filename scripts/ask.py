@@ -9,7 +9,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from src.config import load_config, resolve_path  # noqa: E402
 from src.generate import Assistant  # noqa: E402
 from src.index import get_collection, open_client  # noqa: E402
-from src.providers import get_embedder, get_llm  # noqa: E402
+from src.providers import get_embedder, get_llm, get_moderator  # noqa: E402
 from src.providers.openai import estimate_cost  # noqa: E402
 from src.spoilers import MAX_LEVEL, PROGRESS_LEVELS  # noqa: E402
 
@@ -25,7 +25,8 @@ def main() -> None:
 
     cfg = load_config()
     embedder, llm = get_embedder(cfg), get_llm(cfg)
-    assistant = Assistant(cfg, get_collection(open_client(resolve_path(cfg, "chroma")), embedder), embedder, llm)
+    assistant = Assistant(cfg, get_collection(open_client(resolve_path(cfg, "chroma")), embedder), embedder, llm,
+                          get_moderator(cfg))
 
     print(f"[{PROGRESS_LEVELS[args.level][0]}] {args.question}\n")
     plan = assistant.prepare(args.question, args.level, hide_speculation=args.hide_speculation)

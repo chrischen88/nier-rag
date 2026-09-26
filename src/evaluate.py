@@ -72,6 +72,7 @@ class Result:
     retrieved: list[dict[str, Any]]  # page_title, section_path, spoiler_level, similarity
     answer: str | None = None  # None in --retrieval-only runs
     refused_before_llm: bool = False
+    guardrail: str | None = None  # which guardrail refused or blocked the answer (src/generate.py)
     citations: int = 0
     invalid_citations: list[int] = field(default_factory=list)
     seconds: float | None = None
@@ -102,7 +103,8 @@ class Result:
     def refused(self) -> bool | None:
         if self.answer is None:
             return None
-        return self.refused_before_llm or (self.citations == 0 and bool(REFUSAL_RE.search(self.answer)))
+        return (self.refused_before_llm or self.guardrail is not None
+                or (self.citations == 0 and bool(REFUSAL_RE.search(self.answer))))
 
 
 @dataclass
@@ -184,6 +186,12 @@ def render_report(results: list[Result], metrics: list[Metric], meta: dict[str, 
         f"| {_excerpt(r.answer)} |"
         for r in results if r.refused is not None and not r.is_trap and bool(r.refused) != r.should_refuse],
         "| id | level | question | error | answer |")
+    fired = {}
+    for r in results:
+        if r.guardrail:
+            fired.setdefault(r.guardrail, []).append(r.id)
+    section("Guardrails fired", [f"| {g} | {len(ids)} | {', '.join(ids)} |" for g, ids in sorted(fired.items())],
+            "| guardrail | count | ids |")
     section("Invalid citations", [
         f"| {r.id} | {r.invalid_citations} |" for r in results if r.invalid_citations], "| id | removed |")
     section("Errors", [f"| {r.id} | {_excerpt(r.error)} |" for r in results if r.error], "| id | error |")

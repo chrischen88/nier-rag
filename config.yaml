@@ -108,6 +108,26 @@ selection:                    # SPEC §5.2; the resulting data/manifest.json can
     - "NieR:Automata Arranged & Unreleased Tracks"
   skip_subpages: ["Gallery"]
 
+guardrails:                   # on top of the spoiler filter; see SPEC §7.3
+  max_question_chars: 500     # longer questions are refused before any API call
+  moderation: true            # check each question with OpenAI's moderation endpoint (free)
+  moderation_model: omni-moderation-latest
+  moderation_categories:      # act only on these. Not "violence"/"illicit": they flag ordinary lore questions
+    - harassment              # ("Why does 2B kill 9S?" scores 0.51 for violence) and harmless off-topic ones.
+    - harassment/threatening  # The prompt declines off-topic requests the moderator lets through.
+    - hate
+    - hate/threatening
+    - self-harm/intent        # answered with crisis resources instead of a plain refusal
+    - self-harm/instructions
+    - sexual
+    - sexual/minors
+    - illicit/violent
+  answer_spoiler_check: true  # hold back streamed text and block answers that state a twist above the level
+
+app:
+  daily_question_limit: 300   # per server process per day, across all sessions; 0 = unlimited. Caps OpenAI
+                              # spend when deployed (~$0.0002 per question with gpt-4o-mini)
+
 pricing:                      # USD per 1M tokens, for cost estimates only; check openai.com/api/pricing
   chat_input: 0.15            # gpt-4o-mini
   chat_output: 0.60

@@ -55,6 +55,7 @@ def app(monkeypatch):
 
         monkeypatch.setattr("src.providers.get_embedder", lambda cfg: embedder)
         monkeypatch.setattr("src.providers.get_llm", lambda cfg: llm or FakeLLM())
+        monkeypatch.setattr("src.providers.get_moderator", lambda cfg: None)
         monkeypatch.setattr("src.index.open_client", lambda path: None)
         monkeypatch.setattr("src.index.get_collection", get_collection)
         monkeypatch.setattr("src.generate.retrieve", retrieve)
@@ -119,7 +120,7 @@ def test_debug_panel_shows_passages_levels_and_prompt(app):
     table = debug.dataframe[0].value
     assert list(table["level"]) == [1, 1] and list(table["#"]) == [1, 2]
     assert "Removed citations" in debug.warning[0].value
-    assert any("Question: Who is Pascal?" in c.value for c in debug.code)
+    assert any("<question>\nWho is Pascal?\n</question>" in c.value for c in debug.code)
 
 
 def test_provider_failure_is_shown_not_raised(app):
@@ -134,3 +135,29 @@ def test_index_mismatch_is_reported_at_startup(app):
     assert not at.exception
     assert "--reindex" in at.error[0].value
     assert not at.chat_input
+
+
+def test_daily_question_limit_stops_answering(app, monkeypatch):
+    from src.config import load_config
+
+    cfg = load_config()
+    cfg["app"] = {"daily_question_limit": 1}
+    monkeypatch.setattr("src.config.load_config", lambda *a, **k: cfg)
+    llm = FakeLLM()
+    at = ask(app(llm=llm), "Who is Pascal?", level=5)
+    ask(at, "Who is Adam?")
+    assert "come back tomorrow" in at.chat_message[3].error[0].value
+    assert llm.usage.prompt_tokens == 100  # only the first question reached the model
+
+
+def test_password_gate(app, monkeypatch):
+    monkeypatch.setenv("APP_PASSWORD", "hunter2")
+    at = app()
+    assert not at.chat_input and at.text_input[0].label == "Password"
+    at.text_input[0].set_value("wrong")
+    enter = lambda: next(b for b in at.button if b.label == "Enter")  # noqa: E731
+    enter().click().run()
+    assert "Wrong password" in at.error[0].value and not at.chat_input
+    at.text_input[0].set_value("hunter2")
+    enter().click().run()
+    assert at.chat_input

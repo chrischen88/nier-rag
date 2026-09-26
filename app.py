@@ -3,19 +3,27 @@
 Each question is answered on its own: chat history isn't sent to the model (query rewriting for
 follow-ups is on the roadmap, SPEC §14). Turns asked at a later progress level than the current one
 are hidden, so lowering the slider also hides answers that could now be spoilers.
+
+When deployed (Dockerfile, fly.toml), two guards limit OpenAI spend: `app.daily_question_limit` in
+config.yaml caps questions per server process per day, and setting the APP_PASSWORD environment variable
+asks visitors for a password.
 """
 
 from __future__ import annotations
 
 import dataclasses
-from dataclasses import dataclass
+import hmac
+import os
+import threading
+from dataclasses import dataclass, field
+from datetime import date
 
 import streamlit as st
 
 from src.config import ConfigError, load_config, resolve_path
 from src.generate import Answer, Assistant
 from src.index import IndexMismatchError, get_collection, open_client
-from src.providers import ProviderError, get_embedder, get_llm
+from src.providers import ProviderError, get_embedder, get_llm, get_moderator
 from src.providers.openai import Usage, estimate_cost
 from src.spoilers import PROGRESS_LEVELS
 
@@ -28,11 +36,35 @@ class Turn:
     error: str | None = None
 
 
+@dataclass
+class DailyLimit:
+    """Questions allowed per day, shared by every session in this server process (0 = unlimited)."""
+    limit: int
+    day: date | None = None
+    count: int = 0
+    _lock: threading.Lock = field(default_factory=threading.Lock, repr=False)
+
+    def take(self) -> bool:
+        with self._lock:
+            if self.day != date.today():
+                self.day, self.count = date.today(), 0
+            if self.limit and self.count >= self.limit:
+                return False
+            self.count += 1
+            return True
+
+
+@st.cache_resource
+def daily_limit(limit: int) -> DailyLimit:
+    return DailyLimit(limit)
+
+
 @st.cache_resource(show_spinner="Opening the archive…")
 def load_assistant() -> Assistant:
     cfg = load_config()
     embedder, llm = get_embedder(cfg), get_llm(cfg)
-    return Assistant(cfg, get_collection(open_client(resolve_path(cfg, "chroma")), embedder), embedder, llm)
+    return Assistant(cfg, get_collection(open_client(resolve_path(cfg, "chroma")), embedder), embedder, llm,
+                     get_moderator(cfg))
 
 
 def md(text: str) -> str:
@@ -57,6 +89,8 @@ def render_answer(ans: Answer, debug: bool) -> None:
 def render_debug(ans: Answer) -> None:
     with st.expander("Debug"):
         how = "refused before calling the LLM" if ans.refused_before_llm else f"{len(ans.citations)} cited"
+        if ans.guardrail:
+            how += f" · guardrail: {ans.guardrail}"
         st.caption(f"{ans.seconds:.2f}s · {len(ans.passages)} passages retrieved · {how}")
         if ans.invalid_citations:
             st.warning(f"Removed citations to passages that don't exist: {ans.invalid_citations}")
@@ -122,6 +156,16 @@ with st.sidebar:
 
 st.title("YoRHa Archive")
 
+if (password := os.environ.get("APP_PASSWORD")) and not state.get("authed"):
+    with st.form("login"):
+        given = st.text_input("Password", type="password")
+        if st.form_submit_button("Enter"):
+            if hmac.compare_digest(given.encode(), password.encode()):
+                state.authed = True
+                st.rerun()
+            st.error("Wrong password.")
+    st.stop()
+
 try:
     assistant = load_assistant()
 except (ConfigError, IndexMismatchError) as e:
@@ -139,13 +183,19 @@ if hidden := len(state.turns) - len(visible):
 for turn in visible:
     render_turn(turn, debug)
 
-if question := st.chat_input("Ask about NieR:Automata lore"):
+if question := st.chat_input("Ask about NieR:Automata lore",
+                             max_chars=cfg.get("guardrails", {}).get("max_question_chars")):
     with st.chat_message("user"):
         st.markdown(md(question))
     with st.chat_message("assistant"):
-        before = usage_snapshot(assistant)
-        state.turns.append(answer_question(assistant, question, level, hide_speculation, debug))
-        state.tokens = tuple(t + a - b for t, a, b in zip(state.tokens, usage_snapshot(assistant), before))
+        if not daily_limit(cfg.get("app", {}).get("daily_question_limit", 0)).take():
+            state.turns.append(Turn(question, level, error="The archive has answered all the questions it can "
+                                                           "for today. Please come back tomorrow."))
+            st.error(state.turns[-1].error)
+        else:
+            before = usage_snapshot(assistant)
+            state.turns.append(answer_question(assistant, question, level, hide_speculation, debug))
+            state.tokens = tuple(t + a - b for t, a, b in zip(state.tokens, usage_snapshot(assistant), before))
 
 prompt_toks, completion_toks, embed_toks = state.tokens
 cost = estimate_cost(cfg, Usage(prompt_tokens=prompt_toks, completion_tokens=completion_toks),

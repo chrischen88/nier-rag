@@ -1,0 +1,9 @@
+# Allow-list: only what the app needs at runtime. Keeps .env, the raw dump, and caches out of the image.
+*
+!app.py
+!config.yaml
+!pyproject.toml
+!uv.lock
+!src/
+!data/chroma/
+**/__pycache__

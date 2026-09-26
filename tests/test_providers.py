@@ -58,3 +58,13 @@ def test_openai_errors_become_provider_errors(openai_key, stream):
     with pytest.raises(ProviderError, match="OpenAI request failed"):
         out = llm.generate([{"role": "user", "content": "hi"}], stream=stream)
         list(out) if stream else out
+
+
+def test_moderator_is_optional(openai_key):
+    from src.providers import Moderator, get_moderator
+
+    cfg = load_config()
+    assert cfg["guardrails"]["moderation"] is True
+    assert isinstance(get_moderator(cfg), Moderator)
+    cfg["guardrails"]["moderation"] = False
+    assert get_moderator(cfg) is None

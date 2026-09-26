@@ -87,3 +87,9 @@ def test_question_set_meets_spec():
     titles = {p["title"] for p in json.load(open(ROOT / "data/manifest.json"))["pages"]}
     missing = {e for q in qs for e in q.expected_pages} - titles
     assert not missing, missing
+
+
+def test_adversarial_set_loads():
+    qs = load_questions(ROOT / "eval/adversarial.jsonl")
+    assert sum(bool(q.leak_terms) for q in qs) >= 5 and sum(q.should_refuse for q in qs) >= 5
+    assert any(not q.should_refuse and q.expected_pages for q in qs)  # guardrails must not refuse real lore
